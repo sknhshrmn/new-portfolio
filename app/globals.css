@@ -2,20 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.text-1 {
+  font-family: var(--font-montserrat);
 }
 
-@media (prefers-color-scheme: dark) {
+.text-2 {
+  font-family: var(--font-poppins);
+}
+
+#radix-«r2» {
+  max-height: 85vh !important;
+}
+
+/* Modal */
+.carousel-item img {
+  max-height: 500px; /* Adjust this based on your design */
+  width: auto;
+  object-fit: contain; /* Ensures full image fits */
+  margin: auto; /* Centers image horizontally */
+}
+
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #d8dbe2; /* Light grayish blue */
+    --foreground: #1b1b1e; /* Deep charcoal */
+
+    --card: #a9bcd0; /* Muted blue-gray */
+    --card-foreground: #1b1b1e;
+
+    --popover: #a9bcd0;
+    --popover-foreground: #1b1b1e;
+
+    --primary: #58a4b0; /* Vibrant turquoise */
+    --primary-foreground: #1b1b1e;
+
+    --secondary: #373f51; /* Dark desaturated blue */
+    --secondary-foreground: #d8dbe2;
+
+    --accent: #58a4b0; /* Matching primary color */
+    --accent-foreground: #d8dbe2;
+
+    --muted: aliceblue;
+    --muted-foreground: #373f51;
+
+    --border: #373f51;
+    --input: #a9bcd0;
+    --ring: #58a4b0;
+
+    --radius: 0.5rem;
+
+    --menu-bg: #3c4a5a;
+    --menu-hover-bg: #5a6b7a;
+
+    --destructive: #ff6f61;
+    --destructive-foreground: #f1c40f;
+  }
+
+  .dark {
+    --background: #1b1b1e; /* Dark background */
+    --foreground: #d8dbe2; /* Soft white */
+
+    --card: #373f51; /* Darker blue */
+    --card-foreground: #d8dbe2;
+
+    --popover: #373f51;
+    --popover-foreground: #d8dbe2;
+
+    --primary: darkcyan; /* Vibrant turquoise */
+    --primary-foreground: #d8dbe2;
+
+    --secondary: #a9bcd0; /* Lighter blue-gray */
+    --secondary-foreground: #1b1b1e;
+
+    --accent: #58a4b0; /* Matching primary */
+    --accent-foreground: #d8dbe2;
+
+    --muted: aliceblue;
+    --muted-foreground: darkcyan;
+
+    --border: #a9bcd0;
+    --input: #a9bcd0;
+    --ring: #58a4b0;
+
+    --menu-bg: #2b3d4a;
+    --menu-hover-bg: #4c5a67;
+
+    --destructive: #ff6f61;
+    --destructive-foreground: #f1c40f;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .menu {
+    background-color: var(--menu-bg);
+  }
 }

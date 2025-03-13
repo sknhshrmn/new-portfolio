@@ -1,0 +1,31 @@
+[
+  {
+    "title": "Software Engineer",
+    "company": "INVOKE Solutions Sdn. Bhd.",
+    "date": "Oct 2023 - Present",
+    "description": "Started as an intern working on full-stack development with Express.js (Node.js) and React, along with WordPress customization. Now, as a Software Engineer at INVOKE Solutions, I develop responsive UIs with Next.js and Tailwind CSS while also working on Laravel backend development, building RESTful APIs, and managing MySQL databases.",
+    "stack": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Laravel",
+      "Node.js",
+      "Express",
+      "MySQL"
+    ]
+  },
+  {
+    "title": "Software Engineer (PLC)",
+    "company": "RS-Simulation Asia Sdn. Bhd.",
+    "date": "Apr 2019 - Sept 2023",
+    "description": "I developed and modified PLC programs in CoDeSys using Function Block Diagram and Structured Text. Additionally, I built an internal web app using Django and Bootstrap for internal workflows.",
+    "stack": ["Django", "Bootstrap", "JavaScript", "CSS", "PostgreSQL"]
+  },
+  {
+    "title": "R&D Automation Engineer",
+    "company": "JKS Engineering Sdn. Bhd.",
+    "date": "Nov 2017 - Dec 2018",
+    "description": "Designed 3D automation system concepts and created technical drawings using SolidWorks. This role strengthened my problem-solving skills, which I later applied in software development.",
+    "stack": ["SolidWorks"]
+  }
+]

@@ -1,0 +1,111 @@
+[
+  {
+    "id": 1,
+    "title": "Service Management & Reporting System for Engineers (Built with Django)",
+    "type": "Full-Stack Web Application (Internal System)",
+    "description": "A powerful internal app that streamlines service reports, manages chamber data, and enhances customer tracking for better efficiency and security.",
+    "techStack": [
+      {
+        "name": "Django",
+        "description": "Full-stack framework for backend logic, templating, and security"
+      },
+      {
+        "name": "PostgreSQL",
+        "description": "Relational database optimized for structured service data"
+      },
+      {
+        "name": "JavaScript",
+        "description": "Enhancing UI with dynamic interactions and AJAX updates"
+      },
+      {
+        "name": "Bootstrap",
+        "description": " Responsive UI for better user experience"
+      },
+      {
+        "name": "Django Translation Package",
+        "description": "Provides multilingual support (English & German) using Django's translation framework"
+      }
+    ],
+    "users": ["Service Engineers", "Database Admins", "Stockist"],
+    "keyFeatures": [
+      "Centralized Database",
+      "Role-Based Access Control",
+      "Automated Report ID Issuance",
+      "Asynchronous Data Fetching",
+      "Django Admin Panel",
+      "Bilingual Support (English & German)"
+    ],
+    "status": "Under testing & refinement.",
+    "problem_solution": {
+      "problem": [
+        "Scattered service data across multiple files.",
+        "Manual tracking of Service Report IDs leading to errors.",
+        "Page reloads required for CRUD operations.",
+        "Users needed support for multiple languages."
+      ],
+      "solution": [
+        "Built a structured database for easy access.",
+        "Automated Service Report ID generation.",
+        "Implemented async fetching for real-time updates.",
+        "Integrated Django's built-in translation framework to support English & German."
+      ]
+    },
+    "impact": {
+      "fasterDataRetrieval": "50% Faster Data Retrieval.",
+      "errorReduction": "Eliminated Manual Errors.",
+      "realTimeUpdates": "Async fetching for real-time data.",
+      "enhancedUX": "Improved UI/UX for smoother interactions.",
+      "multilingualSupport": "Users can switch between English & German."
+    },
+    "my_role": [
+      "Designed and developed both backend (Django, PostgreSQL) and frontend.",
+      "Implemented efficient database structures and optimized queries for performance.",
+      "Improved API response times for a smoother user experience.",
+      "Handled bug fixes, feature expansions, and system refinements.",
+      "Added bilingual support using Django's translation system."
+    ],
+    "key_takeaways": {
+      "technical_growth": [
+        "First attempt at developing a full web application using Django.",
+        "Applied MVC (MVT) architecture for structured development.",
+        "Implemented OOP principles for scalable and maintainable code.",
+        "Optimized database queries using Django ORM."
+      ],
+      "professional_growth": [
+        "Handled real-world user feedback and iterative improvements.",
+        "Balanced business and technical needs while working independently.",
+        "Improved user experience based on feedback, enhancing UI/UX and system usability."
+      ]
+    },
+    "current_status": {
+      "development": "Under testing and refinement.",
+      "next_steps": ["Feature enhancements.", "Advanced reporting integration."]
+    },
+    "screenshots": [
+      { "caption": "Homepage (English)", "url": "/images/django/homepage.png" },
+      {
+        "caption": "The web app in German",
+        "url": "/images/django/in-german.png"
+      },
+      {
+        "caption": "Translation Manager",
+        "url": "/images/django/translation-manager.png"
+      },
+      {
+        "caption": "Global Search Function",
+        "url": "/images/django/global-search-function.png"
+      },
+      { "caption": "Feedback Form", "url": "/images/django/feedback-form.png" },
+      {
+        "caption": "Language Selection",
+        "url": "/images/django/change-language.png"
+      },
+      {
+        "caption": "Documents Page",
+        "url": "/images/django/documents-page.png"
+      },
+      { "caption": "Admin Panel", "url": "/images/django/admin-panel.png" }
+    ],
+    "thumbnail": "/images/django/homepage.png"
+  }
+]
