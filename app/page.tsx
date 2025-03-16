@@ -53,7 +53,7 @@ export default function Home() {
           activeSection === "home"
             ? "border-2 border-primary shadow-2xl rounded-[10px]"
             : ""
-        } transition-all duration-100 ease-in-out hover:scale-101 hover:bg-primary/10 hover:shadow-lg`}
+        }  transition-all duration-100 ease-in-out hover:scale-101 hover:bg-primary/10 hover:shadow-lg`}
       >
         <ProfileCard />
       </section>

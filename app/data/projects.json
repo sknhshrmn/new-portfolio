@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Service Management & Reporting System for Engineers (Built with Django)",
+    "title": "Database Management & Reporting System for Service Engineers (Built with Django)",
     "type": "Full-Stack Web Application (Internal System)",
     "description": "A powerful internal app that streamlines service reports, manages chamber data, and enhances customer tracking for better efficiency and security.",
     "techStack": [

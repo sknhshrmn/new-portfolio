@@ -102,7 +102,7 @@ const ProjectSubCard: React.FC<ProjectSubCardProps> = ({ project }) => {
 
         <div className="flex flex-col justify-between">
           {/* Description */}
-          <Typography variant="p" className="!text-muted-foreground">
+          <Typography variant="p" className="!text-foreground">
             {description}
           </Typography>
 

@@ -1,7 +1,7 @@
 import React, { CSSProperties } from "react";
 
 interface TypographyProps {
-  variant?: "h1" | "h2" | "h3" | "p" | "pHover" | "small" | "quote";
+  variant?: "h1" | "h2" | "h3" | "p" | "pHover" | "small" | "quote" | "stack";
   children: React.ReactNode;
   className?: string;
   style?: CSSProperties;
@@ -21,7 +21,8 @@ const Typography: React.FC<TypographyProps> = ({
     p: "text-xs sm:text-sm text-muted-foreground",
     pHover:
       "text-xs sm:text-sm text-white hover:text-accent transition-colors duration-300", // Hover accent color
-    small: "text-[0.75rem] sm:text-xs text-gray-600 dark:text-primary",
+    small: "text-[0.75rem] sm:text-xs text-primary",
+    stack: "text-[0.75rem] sm:text-xs text-muted-foreground dark:text-muted",
     quote:
       "text-xs sm:text-base italic border-l-4 border-primary pl-4 text-accent",
   };
@@ -29,13 +30,13 @@ const Typography: React.FC<TypographyProps> = ({
   const Component: keyof JSX.IntrinsicElements =
     variant === "quote"
       ? "blockquote"
-      : variant === "pHover" || variant === "small"
+      : variant === "pHover" || variant === "small" || variant === "stack"
       ? "span"
       : variant;
 
   return (
     <Component
-      className={`${baseStyles} ${styles[variant]} ${className} text-gray-900 dark:text-white`}
+      className={`${baseStyles} ${styles[variant]} ${className}`}
       {...props}
     >
       {children}

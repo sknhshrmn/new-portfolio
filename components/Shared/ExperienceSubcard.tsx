@@ -39,9 +39,7 @@ const ExperienceSubcard: React.FC<ExperienceSubcardProps> = ({ exp }) => {
             variant="outline"
             className="!text-muted-foreground rounded-full cursor-default border-muted-foreground"
           >
-            <Typography variant="small" className="!text-muted-foreground">
-              {stack}
-            </Typography>
+            <Typography variant="stack">{stack}</Typography>
           </Button>
         ))}
       </div>
