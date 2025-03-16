@@ -93,13 +93,13 @@ export default function DjangoProject() {
                 <FaCode className="text-green-400" /> Tech Stack
               </Typography>
               <div className="flex flex-wrap gap-2">
-                {project.techStack.map((stack: string, index: number) => (
+                {project.techStack.map((stack, index) => (
                   <Button
                     key={index}
                     variant="default"
                     className="rounded-full cursor-default"
                   >
-                    {stack}
+                    {stack.name}
                   </Button>
                 ))}
               </div>
@@ -133,10 +133,10 @@ export default function DjangoProject() {
         {/* My Role */}
         <InnerCard title="My Role & Responsibilities">
           <ul className="list-disc list-inside w-full text-foreground">
-            {project.my_role.responsibilities.map((resp, index) => (
+            {project.my_role.map((role, index) => (
               <li key={index} className="flex items-start gap-2">
                 <FaCheckCircle className="text-secondary mt-0 sm:mt-0.5" />
-                <Typography variant="p">{resp}</Typography>
+                <Typography variant="p">{role}</Typography>
               </li>
             ))}
           </ul>

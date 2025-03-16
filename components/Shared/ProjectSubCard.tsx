@@ -2,9 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Button } from "../ui/button";
 import Typography from "./Typography";
-import Link from "next/link";
 import ProjectDrawer from "./ProjectDrawer"; // Ensure to import ProjectDrawer
 import ProjectScreenshots from "./ProjectScreenshots";
 

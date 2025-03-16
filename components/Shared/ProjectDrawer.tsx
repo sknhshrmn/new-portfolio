@@ -22,15 +22,6 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import Image from "next/image";
 
 interface StackType {
   name: string;
@@ -225,7 +216,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
             {project.impact && (
               <InnerCard title="Impact">
                 <ul className="list-disc list-inside text-gray-600">
-                  {Object.entries(project.impact).map(([key, value], index) => (
+                  {Object.entries(project.impact).map((value, index) => (
                     <li key={index}>{value}</li>
                   ))}
                 </ul>
@@ -235,11 +226,9 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
             {project.my_role && project.my_role.length > 0 && (
               <InnerCard title="My Role">
                 <ul className="list-disc list-inside text-gray-600">
-                  {Object.entries(project.my_role).map(
-                    ([key, value], index) => (
-                      <li key={index}>{value}</li>
-                    )
-                  )}
+                  {Object.entries(project.my_role).map((value, index) => (
+                    <li key={index}>{value}</li>
+                  ))}
                 </ul>
               </InnerCard>
             )}
