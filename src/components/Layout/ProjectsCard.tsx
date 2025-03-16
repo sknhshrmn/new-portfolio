@@ -43,11 +43,11 @@ const ProjectsCard = () => {
         {t("Projects")}
       </Typography>
       {projects ? (
-        <>
+        <div className="flex flex-col gap-12">
           {projects?.map((project, index) => (
             <ProjectSubCard key={index} project={project} />
           ))}
-        </>
+        </div>
       ) : (
         <Spinner />
       )}

@@ -1,6 +1,135 @@
 [
   {
-    "id": 1,
+    "id": 2,
+    "title": "PactOnline - B2B, Will Management & Ticketing System (Built with Next.js)",
+    "type": "Frontend Web Application (B2B Platform & Will Management System)",
+    "description": "A frontend application developed for Pacific Trustee Company to facilitate B2B interactions, will management, and ticketing for agents, partners, admins, and staff. My focus was primarily on the B2B platform and will management system.",
+    "techStack": [
+      {
+        "name": "Next.js",
+        "description": "React framework for server-side rendering and optimized performance"
+      },
+      {
+        "name": "React.js",
+        "description": "Component-based UI development for a responsive frontend"
+      },
+      {
+        "name": "Tailwind CSS",
+        "description": "Utility-first CSS framework for styling and responsive design"
+      },
+      {
+        "name": "Axios",
+        "description": "HTTP client for seamless API communication"
+      },
+      {
+        "name": "React Hook Form",
+        "description": "Form validation and state management with minimal re-renders"
+      },
+      {
+        "name": "TanStack Query",
+        "description": "Efficient data fetching, caching, and synchronization for React applications"
+      }
+    ],
+    "users": [
+      "Agents",
+      "Partners",
+      "Admins",
+      "Pacific Trustee Staff",
+      "Client"
+    ],
+    "keyFeatures": [
+      "B2B Platform for Will Sales",
+      "Will Management System for Clients & Admins",
+      "Ticketing System for Issue Tracking",
+      "Progress Tracking for Will Processing",
+      "Responsive Mobile-Friendly UI",
+      "Efficient API Integration"
+    ],
+    "status": "Part of the frontend team from February 2024 to November 2024. Transitioned out of the team after November 2024.",
+    "problem_solution": {
+      "problem": [
+        "Custom features were requested outside the original user stories, requiring analysis.",
+        "Developing a flexible Will Builder template to meet diverse client needs.",
+        "Lack of detailed user stories led to delays and required client clarification."
+      ],
+      "solution": [
+        "Analyzed custom feature requests and clarified with the client when needed.",
+        "Built a flexible Will Builder template to accommodate different client needs.",
+        "Worked closely with the client to ensure smooth integration of new features."
+      ]
+    },
+    "impact": [
+      "Streamlined will management for faster and more organized processes.",
+      "Improved tracking and transparency for admins and clients.",
+      "Created a user-friendly, responsive interface.",
+      "Initiated the development of a complex feature, passed to the next developer."
+    ],
+    "my_role": [
+      "Developed frontend components in React.js and Next.js.",
+      "Implemented state management using React hooks (useState, useReducer, custom hooks).",
+      "Integrated REST APIs with Axios for seamless backend communication.",
+      "Translated Figma designs into responsive web components for consistent UI/UX.",
+      "Collaborated with backend developers to optimize API performance.",
+      "Used TanStack Query for efficient data fetching and caching.",
+      "Implemented form validation with React Hook Form and integrated validation libraries.",
+      "Designed UI components with ShadCN to maintain a consistent design system."
+    ],
+    "key_takeaways": {
+      "technical_growth": [
+        "Deepened expertise in React.js and Next.js.",
+        "Improved form handling and validation with React Hook Form.",
+        "Enhanced knowledge in optimizing API calls and data fetching."
+      ],
+      "professional_growth": [
+        "Strengthened collaboration with backend developers and designers.",
+        "Gained experience in team workflows.",
+        "Balanced business needs with technical solutions.",
+        "Improved client communication skills through meetings and handling custom requests."
+      ]
+    },
+    "current_status": {
+      "development": "Live after the first phase, with bug fixes and database migrations handled by the new team.",
+      "next_steps": [
+        "Migrate the database for future updates.",
+        "Deploy updates to production.",
+        "Address any bugs reported by client."
+      ],
+      "note": "I transitioned out of the team after the initial phase, and the ongoing tasks are now managed by another developer."
+    },
+    "screenshots": [
+      {
+        "caption": "Will Submission Form",
+        "url": "/images/pactonline/0.png"
+      },
+      {
+        "caption": "Complex Form with Nested Fields",
+        "url": "/images/pactonline/1.png"
+      },
+      {
+        "caption": "Admin Progress Tracking",
+        "url": "/images/pactonline/2.png"
+      },
+      {
+        "caption": "Client Will Submission Page",
+        "url": "/images/pactonline/3.png"
+      },
+      {
+        "caption": "Client Information Table",
+        "url": "/images/pactonline/4.png"
+      },
+      {
+        "caption": "Mobile View",
+        "url": "/images/pactonline/5.png"
+      },
+      {
+        "caption": "Client Progress Tracking",
+        "url": "/images/pactonline/6.png"
+      }
+    ],
+    "thumbnail": "/images/pactonline/2.png"
+  },
+  {
+    "id": 3,
     "title": "Database Management & Reporting System for Service Engineers (Built with Django)",
     "type": "Full-Stack Web Application (Internal System)",
     "description": "A powerful internal app that streamlines service reports, manages chamber data, and enhances customer tracking for better efficiency and security.",
@@ -50,13 +179,14 @@
         "Integrated Django's built-in translation framework to support English & German."
       ]
     },
-    "impact": {
-      "fasterDataRetrieval": "50% Faster Data Retrieval.",
-      "errorReduction": "Eliminated Manual Errors.",
-      "realTimeUpdates": "Async fetching for real-time data.",
-      "enhancedUX": "Improved UI/UX for smoother interactions.",
-      "multilingualSupport": "Users can switch between English & German."
-    },
+    "impact": [
+      "Faster data retrieval.",
+      "Reduced manual errors.",
+      "Async fetching for real-time updates.",
+      "Improved UI/UX for smoother interactions.",
+      "Support for English and German languages."
+    ],
+
     "my_role": [
       "Designed and developed both backend (Django, PostgreSQL) and frontend.",
       "Implemented efficient database structures and optimized queries for performance.",

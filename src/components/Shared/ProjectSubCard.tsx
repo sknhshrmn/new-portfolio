@@ -82,28 +82,18 @@ const ProjectSubCard: React.FC<ProjectSubCardProps> = ({ project }) => {
 
       {/* Image and Description */}
       <div className="flex sm:flex-row flex-col gap-6 sm:gap-8">
-        <div className="mx-auto text-center">
-          {screenshots ? (
-            <Image
-              onClick={handleThumbnailClick}
-              src={thumbnail ?? "/images/default-thumbnail.png"}
-              width={649}
-              height={491}
-              alt={t("Screenshot of the app")}
-              className="mx-auto rounded-lg shadow-md cursor-pointer"
-            />
-          ) : (
+        <div className="mx-auto text-center w-full sm:w-[50%]  flex sm:items-start items-center">
+          <div className="thumbnail-container" onClick={handleThumbnailClick}>
             <Image
               src={thumbnail ?? "/images/default-thumbnail.png"}
-              width={649}
-              height={491}
               alt={t("Screenshot of the app")}
-              className="mx-auto rounded-lg shadow-md"
+              className="thumbnail-image"
+              layout="fill" // Automatically fills the container dimensions
             />
-          )}
+          </div>
         </div>
 
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-between w-full sm:w-[50%]">
           {/* Description */}
           <Typography variant="p" className="!text-foreground">
             {description}

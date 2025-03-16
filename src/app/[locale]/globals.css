@@ -28,6 +28,18 @@
   }
 }
 
+.thumbnail-container {
+  position: relative;
+  width: 100%;
+  height: min-content; /* Fixed height for uniformity */
+}
+
+.thumbnail-image {
+  position: unset !important;
+  object-fit: contain;
+  height: auto !important;
+}
+
 @layer base {
   :root {
     --background: #d8dbe2; /* Light grayish blue */

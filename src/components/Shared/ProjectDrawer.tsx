@@ -123,7 +123,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
             {project.title}
           </SheetTitle>
 
-          <SheetDescription className="overflow-y-auto max-h-[75vh] space-y-6 py-4 scrollbar-hide">
+          <SheetDescription className="overflow-y-auto max-h-[85vh] space-y-6 py-4 scrollbar-hide">
             <InnerCard title={t("Description")}>
               <div className="!text-foreground">
                 {project.description || t("No description available")}
@@ -183,7 +183,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
 
             {project.problem_solution && (
               <InnerCard title={t("Problem & Solution")}>
-                <div className="space-y-2">
+                <div className="space-y-1">
                   <div className="font-montserrat font-semibold text-muted-foreground">
                     {t("Problem")}:
                   </div>
@@ -210,25 +210,29 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
 
             {project.impact && (
               <InnerCard title={t("Impact")}>
-                <div className="!text-foreground">
-                  <ul className="list-disc list-inside text-gray-600">
-                    {Object.entries(project.impact).map((value, index) => (
-                      <li key={index}>{value}</li>
-                    ))}
-                  </ul>
-                </div>
+                <ul className="list-disc list-inside text-gray-600">
+                  <span className="!text-foreground">
+                    {Object.entries(project.impact).map(
+                      ([_key, value], index) => (
+                        <li key={index}>{value}</li>
+                      )
+                    )}
+                  </span>
+                </ul>
               </InnerCard>
             )}
 
             {project.my_role && project.my_role.length > 0 && (
               <InnerCard title={t("My Role")}>
-                <div className="!text-foreground">
-                  <ul className="list-disc list-inside text-gray-600">
-                    {Object.entries(project.my_role).map((role, index) => (
-                      <li key={index}>{role}</li>
-                    ))}
-                  </ul>
-                </div>
+                <ul className="list-disc list-inside text-gray-600">
+                  <span className="!text-foreground">
+                    {Object.entries(project.my_role).map(
+                      ([_key, value], index) => (
+                        <li key={index}>{value}</li>
+                      )
+                    )}
+                  </span>
+                </ul>
               </InnerCard>
             )}
 

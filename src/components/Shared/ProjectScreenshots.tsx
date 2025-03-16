@@ -48,7 +48,7 @@ const ProjectScreenshots: React.FC<ProjectDrawerProps> = ({
                     className="flex flex-col items-center justify-center relative"
                   >
                     {/* Image Container */}
-                    <div className="relative w-full max-h-[80vh] h-auto overflow-hidden rounded-lg flex items-center justify-center">
+                    <div className="relative w-auto max-h-[70vh]  overflow-hidden rounded-lg flex items-center justify-center">
                       <Image
                         src={image.url}
                         alt={image.caption || "Image"}
@@ -61,7 +61,7 @@ const ProjectScreenshots: React.FC<ProjectDrawerProps> = ({
                     </div>
 
                     {/* Caption */}
-                    <div className="mt-2 text-foreground px-4 py-2">
+                    <div className="mt-4 text-foreground px-4 py-2">
                       <p className="text-center text-sm font-medium italic">
                         {image.caption || "No caption available"}
                       </p>
