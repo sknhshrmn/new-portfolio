@@ -1,6 +1,12 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useState,
+} from "react";
 
 type Theme = "light" | "dark";
 
@@ -9,17 +15,27 @@ const ThemeContext = createContext<
 >(undefined);
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof window !== "undefined") {
-      return (localStorage.getItem("theme") as Theme) || "light";
+  const [theme, setTheme] = useState<Theme>("light");
+  const [mounted, setMounted] = useState(false);
+
+  useLayoutEffect(() => {
+    // Prevent hydration mismatch by updating theme only after mount
+    const storedTheme = localStorage.getItem("theme") as Theme;
+    if (storedTheme) {
+      setTheme(storedTheme);
     }
-    return "light";
-  });
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
-    localStorage.setItem("theme", theme);
+    if (mounted) {
+      document.documentElement.classList.toggle("dark", theme === "dark");
+      localStorage.setItem("theme", theme);
+    }
   }, [theme]);
+
+  // Prevent rendering until the component is mounted to avoid hydration issues
+  if (!mounted) return null;
 
   const toggleTheme = () =>
     setTheme((prev) => (prev === "light" ? "dark" : "light"));

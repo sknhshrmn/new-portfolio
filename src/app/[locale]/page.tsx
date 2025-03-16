@@ -9,10 +9,14 @@ import { useEffect, useState } from "react";
 import Typography from "@/src/components/Shared/Typography";
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState<string | null>(null);
-  const [bigTitle, setBigTitle] = useState<string | null>(null);
+  const [activeSection, setActiveSection] = useState<string>("home");
+  const [bigTitle, setBigTitle] = useState<string>("home");
 
   useEffect(() => {
+    // Set "home" as active immediately on mount
+    setActiveSection("home");
+    setBigTitle("home");
+
     const sections = document.querySelectorAll(".section");
 
     // Create an IntersectionObserver for each section
@@ -26,14 +30,17 @@ export default function Home() {
         });
       },
       {
-        threshold: 0.6, // 50% of the section should be visible
+        threshold: 0.8, // 80% of the section should be visible
       }
     );
 
-    sections.forEach((section) => observer.observe(section));
+    // Delay the observer to avoid conflicts with initial state
+    const timeout = setTimeout(() => {
+      sections.forEach((section) => observer.observe(section));
+    }, 100); // Small delay to allow the UI to settle
 
-    // Cleanup observer on unmount
     return () => {
+      clearTimeout(timeout);
       sections.forEach((section) => observer.unobserve(section));
     };
   }, []);

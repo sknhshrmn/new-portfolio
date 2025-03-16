@@ -5,6 +5,7 @@ import Card from "../Shared/Card";
 import ProjectSubCard from "../Shared/ProjectSubCard";
 import Typography from "../Shared/Typography";
 import { useEffect, useState } from "react";
+import { Spinner } from "../ui/spinner";
 
 interface Project {
   id: string; // Assuming each project has an ID
@@ -33,8 +34,6 @@ const ProjectsCard = () => {
     fetchProjects();
   }, [locale]);
 
-  if (!projects) return <p>Loading...</p>;
-
   return (
     <Card>
       <Typography
@@ -43,9 +42,15 @@ const ProjectsCard = () => {
       >
         {t("Projects")}
       </Typography>
-      {projects?.map((project, index) => (
-        <ProjectSubCard key={index} project={project} />
-      ))}
+      {projects ? (
+        <>
+          {projects?.map((project, index) => (
+            <ProjectSubCard key={index} project={project} />
+          ))}
+        </>
+      ) : (
+        <Spinner />
+      )}
     </Card>
   );
 };

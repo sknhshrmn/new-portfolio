@@ -23,6 +23,7 @@ import {
   SheetTitle,
 } from "@/src/components/ui/sheet";
 import { useTranslations } from "next-intl";
+import { Spinner } from "../ui/spinner";
 
 interface StackType {
   name: string;
@@ -77,7 +78,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
 }) => {
   const t = useTranslations("Home") ?? (() => (key: string) => key);
 
-  if (!project) return <p>Loading...</p>;
+  if (!project) return <Spinner />;
 
   const InnerCard = ({
     title,

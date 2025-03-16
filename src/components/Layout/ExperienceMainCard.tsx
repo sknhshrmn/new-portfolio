@@ -5,11 +5,12 @@ import Card from "../Shared/Card";
 import ExperienceSubcard from "../Shared/ExperienceSubcard";
 import Typography from "../Shared/Typography";
 import { useEffect, useState } from "react";
+import { Spinner } from "../ui/spinner";
 
 const ExperienceMainCard = () => {
   const t = useTranslations("Home");
   const locale = useLocale();
-  const [experiences, setExperiences] = useState([]);
+  const [experiences, setExperiences] = useState<[] | null>(null);
 
   useEffect(() => {
     async function fetchExperiences() {
@@ -34,11 +35,17 @@ const ExperienceMainCard = () => {
         {t("Experiences")}
       </Typography>
 
-      <div className="w-full flex flex-col justify-start gap-10">
-        {experiences?.map((exp, index) => (
-          <ExperienceSubcard key={index} exp={exp} />
-        ))}
-      </div>
+      {experiences ? (
+        <>
+          <div className="w-full flex flex-col justify-start gap-10">
+            {experiences?.map((exp, index) => (
+              <ExperienceSubcard key={index} exp={exp} />
+            ))}
+          </div>
+        </>
+      ) : (
+        <Spinner />
+      )}
     </Card>
   );
 };
