@@ -1,0 +1,36 @@
+{
+  "Home": {
+    "AboutMe": "About Me",
+    "Resume": "Resume",
+    "Github": "Github",
+    "Experiences": "Experiences",
+    "Projects": "Projects",
+    "Status": "Status",
+    "Screenshot of the app": "Screenshot of the app",
+    "Read more": "Read more",
+    "Description": "Description",
+    "No description available": "No description available",
+    "Key Features": "Key Features",
+    "Tech Stack": "Tech Stack",
+    "Users": "Users",
+    "Problem & Solution": "Problem & Solution",
+    "Problem": "Problem",
+    "Solution": "Solution",
+    "Impact": "Impact",
+    "My Role": "My Role",
+    "Current Status": "Current Status",
+    "Next Steps": "Next Steps",
+    "Key Takeaways": "Key Takeaways",
+    "Technical Growth": "Technical Growth",
+    "Professional Growth": "Professional Growth"
+  },
+  "Menu": {
+    "About Me": "About Me",
+    "Experiences": "Experiences",
+    "Projects": "Projects"
+  },
+  "ThemeSwitch": {
+    "Dark Mode": "Dark Mode",
+    "Light Mode": "Dark Mode"
+  }
+}

@@ -3,8 +3,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import Typography from "./Typography";
-import ProjectDrawer from "./ProjectDrawer"; // Ensure to import ProjectDrawer
+import dynamic from "next/dynamic";
+const ProjectDrawer = dynamic(() => import("./ProjectDrawer"), { ssr: false });
 import ProjectScreenshots from "./ProjectScreenshots";
+import { useTranslations } from "next-intl";
 
 interface StackType {
   name: string;
@@ -64,6 +66,7 @@ const ProjectSubCard: React.FC<ProjectSubCardProps> = ({ project }) => {
     setModalOpen(false);
     setSelectedProject(null);
   };
+  const t = useTranslations("Home");
 
   return (
     <div className="w-full flex flex-col gap-6 ">
@@ -73,7 +76,7 @@ const ProjectSubCard: React.FC<ProjectSubCardProps> = ({ project }) => {
           {title}
         </Typography>
         <Typography variant="quote" className="!text-accent">
-          Status: {status}
+          {t("Status")}: {status}
         </Typography>
       </div>
 
@@ -86,7 +89,7 @@ const ProjectSubCard: React.FC<ProjectSubCardProps> = ({ project }) => {
               src={thumbnail ?? "/images/default-thumbnail.png"}
               width={649}
               height={491}
-              alt="Screenshot of the Django-based app"
+              alt={t("Screenshot of the app")}
               className="mx-auto rounded-lg shadow-md cursor-pointer"
             />
           ) : (
@@ -94,7 +97,7 @@ const ProjectSubCard: React.FC<ProjectSubCardProps> = ({ project }) => {
               src={thumbnail ?? "/images/default-thumbnail.png"}
               width={649}
               height={491}
-              alt="Screenshot of the Django-based app"
+              alt={t("Screenshot of the app")}
               className="mx-auto rounded-lg shadow-md"
             />
           )}
@@ -135,7 +138,7 @@ const ProjectSubCard: React.FC<ProjectSubCardProps> = ({ project }) => {
               variant="small"
               className="font-bold !text-destructive cursor-pointer transition-colors"
             >
-              Read more...
+              {t("Read more")}...
             </Typography>
           </div>
         </div>

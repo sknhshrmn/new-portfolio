@@ -1,12 +1,29 @@
+"use client";
+
 import Typography from "../Shared/Typography";
 import Card from "../Shared/Card";
 import { Button } from "../ui/button";
-import aboutMe from "@/app/data/aboutMe.json";
-import React from "react";
-
-const { text, resume_link, github_link } = aboutMe;
+import React, { useEffect, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 
 const AboutMeCard = () => {
+  const t = useTranslations("Home");
+  const locale = useLocale();
+  const [aboutMe, setAboutMe] = useState(null);
+
+  useEffect(() => {
+    async function fetchAboutMe() {
+      const res = await fetch(`/locales/${locale}/aboutMe.json`);
+      const data = await res.json();
+      setAboutMe(data);
+    }
+    fetchAboutMe();
+  }, [locale]);
+
+  if (!aboutMe) return <p>Loading...</p>;
+
+  const { text, resume_link, github_link } = aboutMe;
+
   return (
     <Card>
       {/* Title with Turquoise Gradient */}
@@ -14,7 +31,7 @@ const AboutMeCard = () => {
         variant="h2"
         className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent"
       >
-        About Me
+        {t("AboutMe")}
       </Typography>
 
       {/* About Text */}
@@ -35,7 +52,7 @@ const AboutMeCard = () => {
             rel="noopener noreferrer"
             aria-label="View my resume"
           >
-            Resume
+            {t("Resume")}
           </a>
         </Button>
         <Button
@@ -48,7 +65,7 @@ const AboutMeCard = () => {
             rel="noopener noreferrer"
             aria-label="Visit my GitHub profile"
           >
-            Github
+            {t("Github")}
           </a>
         </Button>
       </div>

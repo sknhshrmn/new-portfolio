@@ -1,11 +1,33 @@
+"use client";
+
 import Image from "next/image";
 import Typography from "../Shared/Typography";
 import Card from "../Shared/Card";
-import profile from "@/app/data/profile.json";
-
-const { profilePicture, name, position, tagline } = profile;
+import { useEffect, useState } from "react";
+import { useLocale } from "next-intl";
 
 const ProfileCard = () => {
+  const locale = useLocale();
+  const [profile, setProfile] = useState(null);
+
+  useEffect(() => {
+    async function fetchProfile() {
+      try {
+        const res = await fetch(`/locales/${locale}/profile.json`);
+        const data = await res.json();
+        setProfile(data);
+      } catch (error) {
+        console.error("Error fetching profile data:", error);
+      }
+    }
+
+    fetchProfile();
+  }, [locale]);
+
+  if (!profile) return <p>Loading...</p>;
+
+  const { profilePicture, name, position, tagline } = profile;
+
   return (
     <Card>
       {/* Profile Image */}
@@ -14,6 +36,7 @@ const ProfileCard = () => {
         width={1920}
         height={1080}
         alt={`Profile image of ${name}`}
+        priority
         className="h-[10rem] w-[10rem] rounded-full border-4 border-foreground/20 shadow-lg object-cover"
       />
 

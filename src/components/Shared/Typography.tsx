@@ -30,8 +30,11 @@ const Typography: React.FC<TypographyProps> = ({
   const Component: keyof JSX.IntrinsicElements =
     variant === "quote"
       ? "blockquote"
-      : variant === "pHover" || variant === "small" || variant === "stack"
-      ? "span"
+      : variant === "p" ||
+        variant === "pHover" ||
+        variant === "small" ||
+        variant === "stack"
+      ? "div"
       : variant;
 
   return (

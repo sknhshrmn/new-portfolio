@@ -4,15 +4,14 @@ import {
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
-} from "@/components/ui/carousel";
+} from "@/src/components/ui/carousel";
 import Image from "next/image";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
-import { DialogDescription } from "@radix-ui/react-dialog";
+} from "@/src/components/ui/dialog";
 
 interface ImageType {
   caption: string;
@@ -37,7 +36,6 @@ const ProjectScreenshots: React.FC<ProjectDrawerProps> = ({
       <DialogContent className="fixed w-[90%] max-w-none h-auto max-h-[90%] rounded-lg flex flex-col bg-background text-foreground dark:bg-card dark:text-card-foreground">
         <DialogHeader className="p-4 border-b border-border">
           <DialogTitle className=" text-primary">{title}</DialogTitle>
-          <DialogDescription className="text-muted-foreground"></DialogDescription>
         </DialogHeader>
 
         <div className="relative flex-1 flex justify-center items-center overflow-hidden">

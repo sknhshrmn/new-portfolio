@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "title": "Sistem Pengurusan Pangkalan Data & Laporan untuk Jurutera Servis (Dibina dengan Django)",
+    "type": "Aplikasi Web Full-Stack (Sistem Dalaman)",
+    "description": "Aplikasi dalaman yang berkuasa untuk menyelaraskan laporan servis, mengurus data bilik kebal, dan meningkatkan penjejakan pelanggan bagi kecekapan dan keselamatan yang lebih baik.",
+    "techStack": [
+      {
+        "name": "Django",
+        "description": "Kerangka kerja full-stack untuk logik backend, templat, dan keselamatan"
+      },
+      {
+        "name": "PostgreSQL",
+        "description": "Pangkalan data hubungan yang dioptimumkan untuk data servis yang berstruktur"
+      },
+      {
+        "name": "JavaScript",
+        "description": "Meningkatkan UI dengan interaksi dinamik dan kemas kini AJAX"
+      },
+      {
+        "name": "Bootstrap",
+        "description": "UI responsif untuk pengalaman pengguna yang lebih baik"
+      },
+      {
+        "name": "Django Translation Package",
+        "description": "Menyediakan sokongan berbilang bahasa (Inggeris & Jerman) menggunakan kerangka terjemahan Django"
+      }
+    ],
+    "users": ["Jurutera Servis", "Pentadbir Pangkalan Data", "Penyimpan Stok"],
+    "keyFeatures": [
+      "Pangkalan Data Berpusat",
+      "Kawalan Akses Berasaskan Peranan",
+      "Penjanaan ID Laporan Automatik",
+      "Pengambilan Data Secara Asinkron",
+      "Panel Admin Django",
+      "Sokongan Dwibahasa (Inggeris & Jerman)"
+    ],
+    "status": "Sedang diuji dan diperhalusi.",
+    "problem_solution": {
+      "problem": [
+        "Data servis bertaburan dalam pelbagai fail.",
+        "Penjejakan ID Laporan Servis secara manual menyebabkan ralat.",
+        "Halaman perlu dimuat semula untuk operasi CRUD.",
+        "Pengguna memerlukan sokongan untuk pelbagai bahasa."
+      ],
+      "solution": [
+        "Membina pangkalan data berstruktur untuk akses yang mudah.",
+        "Menjana ID Laporan Servis secara automatik.",
+        "Melaksanakan pengambilan data secara asinkron untuk kemas kini masa nyata.",
+        "Mengintegrasikan sistem terjemahan terbina dalam Django untuk menyokong Inggeris & Jerman."
+      ]
+    },
+    "impact": {
+      "fasterDataRetrieval": "Pengambilan Data 50% Lebih Pantas.",
+      "errorReduction": "Menghapuskan Ralat Manual.",
+      "realTimeUpdates": "Pengambilan data secara asinkron untuk kemas kini masa nyata.",
+      "enhancedUX": "UI/UX yang dipertingkatkan untuk interaksi yang lebih lancar.",
+      "multilingualSupport": "Pengguna boleh bertukar antara Inggeris & Jerman."
+    },
+    "my_role": [
+      "Mereka bentuk dan membangunkan backend (Django, PostgreSQL) dan frontend.",
+      "Melaksanakan struktur pangkalan data yang cekap dan mengoptimumkan pertanyaan untuk prestasi.",
+      "Menambah baik masa tindak balas API untuk pengalaman pengguna yang lebih lancar.",
+      "Menangani pembaikan pepijat, pengembangan ciri, dan penambahbaikan sistem.",
+      "Menambah sokongan dwibahasa menggunakan sistem terjemahan Django."
+    ],
+    "key_takeaways": {
+      "technical_growth": [
+        "Percubaan pertama membangunkan aplikasi web penuh menggunakan Django.",
+        "Menggunakan seni bina MVC (MVT) untuk pembangunan yang berstruktur.",
+        "Melaksanakan prinsip OOP untuk kod yang boleh dikembangkan dan disenggara.",
+        "Mengoptimumkan pertanyaan pangkalan data menggunakan Django ORM."
+      ],
+      "professional_growth": [
+        "Mengendalikan maklum balas pengguna sebenar dan penambahbaikan berulang.",
+        "Mengimbangi keperluan perniagaan dan teknikal sambil bekerja secara bebas.",
+        "Menambah baik pengalaman pengguna berdasarkan maklum balas, meningkatkan UI/UX dan kebolehgunaan sistem."
+      ]
+    },
+    "current_status": {
+      "development": "Sedang diuji dan diperhalusi.",
+      "next_steps": ["Penambahbaikan ciri.", "Integrasi pelaporan lanjutan."]
+    },
+    "screenshots": [
+      {
+        "caption": "Laman Utama (Inggeris)",
+        "url": "/images/django/homepage.png"
+      },
+      {
+        "caption": "Aplikasi web dalam bahasa Jerman",
+        "url": "/images/django/in-german.png"
+      },
+      {
+        "caption": "Pengurus Terjemahan",
+        "url": "/images/django/translation-manager.png"
+      },
+      {
+        "caption": "Fungsi Carian Global",
+        "url": "/images/django/global-search-function.png"
+      },
+      {
+        "caption": "Borang Maklum Balas",
+        "url": "/images/django/feedback-form.png"
+      },
+      {
+        "caption": "Pilihan Bahasa",
+        "url": "/images/django/change-language.png"
+      },
+      {
+        "caption": "Halaman Dokumen",
+        "url": "/images/django/documents-page.png"
+      },
+      { "caption": "Panel Admin", "url": "/images/django/admin-panel.png" }
+    ],
+    "thumbnail": "/images/django/homepage.png"
+  }
+]

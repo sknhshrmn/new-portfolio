@@ -6,8 +6,11 @@ import { FaHome } from "react-icons/fa";
 import { Button } from "../ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useLayoutEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 const Menu: React.FC = () => {
+  const t = useTranslations("Menu");
+
   const { scrollY } = useScroll(); // Tracks scroll position
   const [windowHeight, setWindowHeight] = useState(0);
 
@@ -51,7 +54,7 @@ const Menu: React.FC = () => {
               variant="secondary"
               className="px-1 text-white hover:text-primary dark:text-white dark:hover:text-primary"
             >
-              <Link href="/#about-me">About Me</Link>
+              <Link href="/#about-me">{t("About Me")}</Link>
             </Button>
           </li>
           <li>
@@ -59,7 +62,7 @@ const Menu: React.FC = () => {
               variant="secondary"
               className="px-1 text-white hover:text-primary dark:text-white dark:hover:text-primary"
             >
-              <Link href="/#experiences">Experiences</Link>
+              <Link href="/#experiences">{t("Experiences")}</Link>
             </Button>
           </li>
           <li>
@@ -67,7 +70,7 @@ const Menu: React.FC = () => {
               variant="secondary"
               className="px-1 text-white hover:text-primary dark:text-white dark:hover:text-primary"
             >
-              <Link href="/#projects">Projects</Link>
+              <Link href="/#projects">{t("Projects")}</Link>
             </Button>
           </li>
           <li>

@@ -21,7 +21,8 @@ import {
   SheetDescription,
   SheetHeader,
   SheetTitle,
-} from "@/components/ui/sheet";
+} from "@/src/components/ui/sheet";
+import { useTranslations } from "next-intl";
 
 interface StackType {
   name: string;
@@ -74,7 +75,9 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
   onClose,
   project,
 }) => {
-  if (!project) return null;
+  const t = useTranslations("Home") ?? (() => (key: string) => key);
+
+  if (!project) return <p>Loading...</p>;
 
   const InnerCard = ({
     title,
@@ -84,10 +87,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
     children: React.ReactNode;
   }) => (
     <div className="border border-border rounded-lg p-4 bg-muted dark:bg-background backdrop-blur-md shadow-md">
-      <Typography
-        variant="h3"
-        className="font-semibold flex items-center gap-2"
-      >
+      <h3 className="font-semibold flex items-center gap-2">
         {title === "Description" && (
           <FaInfoCircle className="text-yellow-400" />
         )}
@@ -98,7 +98,6 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
         {title === "Tech Stack" && <FaCogs className="text-blue-500" />}
         {title === "Key Features" && <FaStar className="text-yellow-400" />}
         {title === "Impact" && <FaRocket className="text-green-500" />}
-
         {title === "My Role & Responsibilities" && (
           <FaUserShield className="text-blue-500" />
         )}
@@ -109,9 +108,8 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
         {title === "Key Takeaways" && (
           <FaLightbulb className="text-orange-400" />
         )}
-
         {title}
-      </Typography>
+      </h3>
       <div className="mt-2">{children}</div>
     </div>
   );
@@ -125,44 +123,41 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
           </SheetTitle>
 
           <SheetDescription className="overflow-y-auto max-h-[75vh] space-y-6 py-4 scrollbar-hide">
-            <InnerCard title="Description">
-              <Typography variant="p" className="!text-foreground">
-                {project.description || "No description available."}
-              </Typography>
+            <InnerCard title={t("Description")}>
+              <div className="!text-foreground">
+                {project.description || t("No description available")}
+              </div>
             </InnerCard>
 
             {project.keyFeatures && project.keyFeatures.length > 0 && (
-              <InnerCard title="Key Features">
-                <ul className="list-disc list-inside text-foreground">
-                  <Typography variant="p" className="!text-foreground">
+              <InnerCard title={t("Key Features")}>
+                <div className="!text-foreground">
+                  <ul className="list-disc list-inside text-foreground">
                     {project.keyFeatures.map((feat, index) => (
                       <li key={index} className="flex items-center gap-2">
                         <FaCheckCircle className="text-secondary" />
                         <span>{feat}</span>
                       </li>
                     ))}
-                  </Typography>
-                </ul>
+                  </ul>
+                </div>
               </InnerCard>
             )}
 
             {project.techStack && project.techStack.length > 0 && (
-              <InnerCard title="Tech Stack">
+              <InnerCard title={t("Tech Stack")}>
                 <div className="flex flex-wrap gap-4">
                   {project.techStack.map((stack, index) => (
                     <div
                       key={index}
                       className="flex flex-col items-start border p-2 rounded-lg w-full"
                     >
-                      <Typography
-                        variant="p"
-                        className="font-montserrat font-semibold"
-                      >
+                      <span className="font-montserrat font-semibold">
                         {stack.name}
-                      </Typography>
-                      <Typography variant="p" className="!text-foreground">
+                      </span>
+                      <span className="!text-foreground">
                         {stack.description}
-                      </Typography>
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -170,7 +165,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
             )}
 
             {project.users && project.users.length > 0 && (
-              <InnerCard title="Users">
+              <InnerCard title={t("Users")}>
                 <div className="flex flex-wrap gap-4">
                   {project.users.map((user, index) => (
                     <Button
@@ -186,84 +181,75 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
             )}
 
             {project.problem_solution && (
-              <InnerCard title="Problem & Solution">
+              <InnerCard title={t("Problem & Solution")}>
                 <div className="space-y-2">
-                  <Typography
-                    variant="p"
-                    className="font-montserrat font-semibold text-muted-foreground"
-                  >
-                    Problem:
-                  </Typography>
+                  <div className="font-montserrat font-semibold text-muted-foreground">
+                    {t("Problem")}:
+                  </div>
                   <ul className="list-disc list-inside text-gray-600">
-                    <Typography variant="p" className="!text-foreground">
+                    <span className="!text-foreground">
                       {project.problem_solution.problem.map((prob, index) => (
                         <li key={index}>{prob}</li>
                       ))}
-                    </Typography>
+                    </span>
                   </ul>
-                  <Typography
-                    variant="p"
-                    className="font-montserrat font-semibold text-muted-foreground"
-                  >
-                    Solution:
-                  </Typography>
+                  <span className="font-montserrat font-semibold text-muted-foreground">
+                    {t("Solution")}:
+                  </span>
                   <ul className="list-disc list-inside text-gray-600">
-                    <Typography variant="p" className="!text-foreground">
+                    <span className="!text-foreground">
                       {project.problem_solution.solution.map((sol, index) => (
                         <li key={index}>{sol}</li>
                       ))}
-                    </Typography>
+                    </span>
                   </ul>
                 </div>
               </InnerCard>
             )}
 
             {project.impact && (
-              <InnerCard title="Impact">
-                <ul className="list-disc list-inside text-gray-600">
-                  <Typography variant="p" className="!text-foreground">
+              <InnerCard title={t("Impact")}>
+                <div className="!text-foreground">
+                  <ul className="list-disc list-inside text-gray-600">
                     {Object.entries(project.impact).map((value, index) => (
                       <li key={index}>{value}</li>
                     ))}
-                  </Typography>
-                </ul>
+                  </ul>
+                </div>
               </InnerCard>
             )}
 
             {project.my_role && project.my_role.length > 0 && (
-              <InnerCard title="My Role">
-                <ul className="list-disc list-inside text-gray-600">
-                  <Typography variant="p" className="!text-foreground">
-                    {Object.entries(project.my_role).map((value, index) => (
-                      <li key={index}>{value}</li>
+              <InnerCard title={t("My Role")}>
+                <div className="!text-foreground">
+                  <ul className="list-disc list-inside text-gray-600">
+                    {Object.entries(project.my_role).map((role, index) => (
+                      <li key={index}>{role}</li>
                     ))}
-                  </Typography>
-                </ul>
+                  </ul>
+                </div>
               </InnerCard>
             )}
 
             {project.current_status && (
-              <InnerCard title="Current Status">
-                <Typography className="text-muted-foreground font-semibold">
+              <InnerCard title={t("Current Status")}>
+                <span className="text-muted-foreground font-semibold">
                   {project.current_status.development}
-                </Typography>
+                </span>
 
                 {project.current_status.next_steps.length > 0 && (
                   <div className="mt-2">
-                    <Typography
-                      variant="p"
-                      className="font-semibold text-muted-foreground"
-                    >
-                      Next Steps:
-                    </Typography>
+                    <span className="font-semibold text-muted-foreground">
+                      {t("Next Steps")}:
+                    </span>
                     <ul className="list-disc list-inside text-gray-600">
-                      <Typography variant="p" className="!text-foreground">
+                      <span className="!text-foreground">
                         {project.current_status.next_steps.map(
                           (step, index) => (
                             <li key={index}>{step}</li>
                           )
                         )}
-                      </Typography>
+                      </span>
                     </ul>
                   </div>
                 )}
@@ -271,37 +257,31 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
             )}
 
             {project.key_takeaways && (
-              <InnerCard title="Key Takeaways">
+              <InnerCard title={t("Key Takeaways")}>
                 <div className="space-y-2">
-                  <Typography
-                    variant="p"
-                    className="font-semibold text-muted-foreground"
-                  >
-                    Technical Growth:
-                  </Typography>
+                  <div className="font-semibold text-muted-foreground">
+                    {t("Technical Growth")}:
+                  </div>
                   <ul className="list-disc list-inside text-gray-600">
-                    <Typography variant="p" className="!text-foreground">
+                    <span className="!text-foreground">
                       {project.key_takeaways.technical_growth.map(
                         (item: string, index: number) => (
                           <li key={index}>{item}</li>
                         )
                       )}
-                    </Typography>
+                    </span>
                   </ul>
-                  <Typography
-                    variant="p"
-                    className="font-semibold text-muted-foreground"
-                  >
-                    Professional Growth:
-                  </Typography>
+                  <div className="font-semibold text-muted-foreground">
+                    {t("Professional Growth")}:
+                  </div>
                   <ul className="list-disc list-inside text-gray-600">
-                    <Typography variant="p" className="!text-foreground">
+                    <span className="!text-foreground">
                       {project.key_takeaways.professional_growth.map(
                         (item: string, index: number) => (
                           <li key={index}>{item}</li>
                         )
                       )}
-                    </Typography>
+                    </span>
                   </ul>
                 </div>
               </InnerCard>

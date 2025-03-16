@@ -1,0 +1,36 @@
+{
+  "Home": {
+    "AboutMe": "Tentang Saya",
+    "Resume": "Resume",
+    "Github": "Github",
+    "Experiences": "Pengalaman",
+    "Projects": "Projek",
+    "Status": "Status",
+    "Screenshot of the app": "Tangkapan skrin aplikasi",
+    "Read more": "Baca lebih lanjut",
+    "Description": "Deskripsi",
+    "No description available": "Tiada deskripsi tersedia",
+    "Key Features": "Ciri Utama",
+    "Tech Stack": "Teknologi Digunakan",
+    "Users": "Pengguna",
+    "Problem & Solution": "Masalah & Penyelesaian",
+    "Problem": "Masalah",
+    "Solution": "Penyelesaian",
+    "Impact": "Impak",
+    "My Role": "Peranan Saya",
+    "Current Status": "Status Semasa",
+    "Next Steps": "Langkah Seterusnya",
+    "Key Takeaways": "Pengajaran Utama",
+    "Technical Growth": "Perkembangan Teknikal",
+    "Professional Growth": "Perkembangan Profesional"
+  },
+  "Menu": {
+    "About Me": "Tentang Saya",
+    "Experiences": "Pengalaman",
+    "Projects": "Projek"
+  },
+  "ThemeSwitch": {
+    "Dark Mode": "Mod Gelap",
+    "Light Mode": "Mod Terang"
+  }
+}

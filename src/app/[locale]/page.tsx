@@ -1,12 +1,12 @@
 "use client";
 
 import "./globals.css";
-import ProfileCard from "@/components/Layout/ProfileCard";
-import AboutMeCard from "@/components/Layout/AboutMeCard";
-import ExperienceMainCard from "@/components/Layout/ExperienceMainCard";
-import ProjectsCard from "@/components/Layout/ProjectsCard";
+import ProfileCard from "@/src/components/Layout/ProfileCard";
+import AboutMeCard from "@/src/components/Layout/AboutMeCard";
+import ExperienceMainCard from "@/src/components/Layout/ExperienceMainCard";
+import ProjectsCard from "@/src/components/Layout/ProjectsCard";
 import { useEffect, useState } from "react";
-import Typography from "@/components/Shared/Typography";
+import Typography from "@/src/components/Shared/Typography";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
