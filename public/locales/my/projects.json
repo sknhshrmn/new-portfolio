@@ -1,6 +1,135 @@
 [
   {
-    "id": 1,
+    "id": 2,
+    "title": "PactOnline - Sistem Pengurusan B2B, Wasiat & Tiket (Dibina dengan Next.js)",
+    "type": "Aplikasi Web Frontend (Platform B2B & Sistem Pengurusan Wasiat)",
+    "description": "Aplikasi frontend yang dibangunkan untuk Pacific Trustee Company bagi memudahkan interaksi B2B, pengurusan wasiat, dan tiket untuk ejen, rakan kongsi, pentadbir, dan kakitangan. Fokus saya adalah terutamanya pada platform B2B dan sistem pengurusan wasiat.",
+    "techStack": [
+      {
+        "name": "Next.js",
+        "description": "Rangka kerja React untuk rendering sisi pelayan dan prestasi yang dioptimumkan"
+      },
+      {
+        "name": "React.js",
+        "description": "Pembangunan UI berasaskan komponen untuk frontend yang responsif"
+      },
+      {
+        "name": "Tailwind CSS",
+        "description": "Rangka kerja CSS berasaskan utiliti untuk penataan dan reka bentuk responsif"
+      },
+      {
+        "name": "Axios",
+        "description": "Pelanggan HTTP untuk komunikasi API yang lancar"
+      },
+      {
+        "name": "React Hook Form",
+        "description": "Pengesahan borang dan pengurusan keadaan dengan sedikit penukaran semula"
+      },
+      {
+        "name": "TanStack Query",
+        "description": "Pengambilan data yang cekap, caching, dan penyegerakan untuk aplikasi React"
+      }
+    ],
+    "users": [
+      "Ejen",
+      "Rakan Kongsi",
+      "Pentadbir",
+      "Kakitangan Pacific Trustee",
+      "Pelanggan"
+    ],
+    "keyFeatures": [
+      "Platform B2B untuk Jualan Wasiat",
+      "Sistem Pengurusan Wasiat untuk Pelanggan & Pentadbir",
+      "Sistem Tiket untuk Penjejakan Masalah",
+      "Penjejakan Kemajuan untuk Pemprosesan Wasiat",
+      "UI Responsif dan Mesra Telefon Bimbit",
+      "Integrasi API yang Cekap"
+    ],
+    "status": "Sebahagian daripada pasukan frontend dari Februari 2024 hingga November 2024. Beralih keluar selepas November 2024.",
+    "problem_solution": {
+      "problem": [
+        "Ciri-ciri khas diminta di luar cerita pengguna asal, memerlukan analisis.",
+        "Membangunkan templat Pembina Wasiat yang fleksibel untuk memenuhi keperluan pelanggan yang berbeza.",
+        "Kekurangan cerita pengguna yang terperinci menyebabkan kelewatan dan memerlukan penjelasan dari pelanggan."
+      ],
+      "solution": [
+        "Menganalisis permintaan ciri khas dan menjelaskan dengan pelanggan apabila diperlukan.",
+        "Membangunkan templat Pembina Wasiat yang fleksibel untuk menampung keperluan pelanggan yang berbeza.",
+        "Bekerjasama rapat dengan pelanggan untuk memastikan integrasi ciri baru berjalan lancar."
+      ]
+    },
+    "impact": [
+      "Memperkemaskan pengurusan wasiat untuk proses yang lebih cepat dan teratur.",
+      "Meningkatkan penjejakan dan ketelusan untuk pentadbir dan pelanggan.",
+      "Mewujudkan antaramuka yang mesra pengguna dan responsif.",
+      "Memulakan pembangunan ciri kompleks, diserahkan kepada pembangun seterusnya."
+    ],
+    "my_role": [
+      "Membangunkan komponen frontend dalam React.js dan Next.js.",
+      "Melaksanakan pengurusan keadaan menggunakan React hooks (useState, useReducer, custom hooks).",
+      "Mengintegrasikan REST APIs dengan Axios untuk komunikasi backend yang lancar.",
+      "Menterjemahkan reka bentuk Figma ke dalam komponen web responsif untuk konsistensi UI/UX.",
+      "Bekerjasama dengan pembangun backend untuk mengoptimumkan prestasi API.",
+      "Menggunakan TanStack Query untuk pengambilan data dan caching yang cekap.",
+      "Melaksanakan pengesahan borang dengan React Hook Form dan mengintegrasikan pustaka pengesahan.",
+      "Mereka bentuk komponen UI dengan ShadCN untuk mengekalkan sistem reka bentuk yang konsisten."
+    ],
+    "key_takeaways": {
+      "technical_growth": [
+        "Memperdalam kepakaran dalam React.js dan Next.js.",
+        "Meningkatkan pengendalian dan pengesahan borang dengan React Hook Form.",
+        "Memperbaiki pengetahuan dalam mengoptimumkan panggilan API dan pengambilan data."
+      ],
+      "professional_growth": [
+        "Mengukuhkan kerjasama dengan pembangun backend dan pereka.",
+        "Mendapatkan pengalaman dalam aliran kerja pasukan.",
+        "Menyeimbangkan keperluan perniagaan dengan penyelesaian teknikal.",
+        "Meningkatkan kemahiran komunikasi pelanggan melalui mesyuarat dan pengendalian permintaan khas."
+      ]
+    },
+    "current_status": {
+      "development": "Live selepas fasa pertama, dengan pembetulan pepijat dan migrasi pangkalan data diuruskan oleh pasukan baru.",
+      "next_steps": [
+        "Migrasi pangkalan data untuk kemas kini akan datang.",
+        "Menghantar kemas kini ke produksi.",
+        "Menangani sebarang pepijat yang dilaporkan oleh pelanggan."
+      ],
+      "note": "Saya beralih keluar dari pasukan selepas fasa pertama, dan tugas yang berterusan kini diuruskan oleh pembangun lain."
+    },
+    "screenshots": [
+      {
+        "caption": "Borang Penghantaran Wasiat",
+        "url": "/images/pactonline/0.png"
+      },
+      {
+        "caption": "Borang Kompleks dengan Medan Bersarang",
+        "url": "/images/pactonline/1.png"
+      },
+      {
+        "caption": "Penjejakan Kemajuan Pentadbir",
+        "url": "/images/pactonline/2.png"
+      },
+      {
+        "caption": "Halaman Penghantaran Wasiat Pelanggan",
+        "url": "/images/pactonline/3.png"
+      },
+      {
+        "caption": "Jadual Maklumat Pelanggan",
+        "url": "/images/pactonline/4.png"
+      },
+      {
+        "caption": "Pandangan Mudah Alih",
+        "url": "/images/pactonline/5.png"
+      },
+      {
+        "caption": "Penjejakan Kemajuan Pelanggan",
+        "url": "/images/pactonline/6.png"
+      }
+    ],
+    "thumbnail": "/images/pactonline/2.png"
+  },
+  {
+    "id": 3,
     "title": "Sistem Pengurusan Pangkalan Data & Laporan untuk Jurutera Servis (Dibina dengan Django)",
     "type": "Aplikasi Web Full-Stack (Sistem Dalaman)",
     "description": "Aplikasi dalaman yang berkuasa untuk menyelaraskan laporan servis, mengurus data bilik kebal, dan meningkatkan penjejakan pelanggan bagi kecekapan dan keselamatan yang lebih baik.",
