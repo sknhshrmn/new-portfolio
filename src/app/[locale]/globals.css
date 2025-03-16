@@ -22,6 +22,12 @@
   margin: auto; /* Centers image horizontally */
 }
 
+@media (hover: none) {
+  button:hover {
+    color: inherit; /* Reset hover styles */
+  }
+}
+
 @layer base {
   :root {
     --background: #d8dbe2; /* Light grayish blue */
