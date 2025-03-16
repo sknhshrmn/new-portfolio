@@ -5,16 +5,18 @@ import { CiLinkedin } from "react-icons/ci";
 import { FaHome } from "react-icons/fa";
 import { Button } from "../ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 
 const Menu: React.FC = () => {
   const t = useTranslations("Menu");
 
   const { scrollY } = useScroll(); // Tracks scroll position
-  const [windowHeight, setWindowHeight] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(
+    typeof window !== "undefined" ? window.innerHeight : 800
+  );
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const updateHeight = () => setWindowHeight(window.innerHeight);
 
     updateHeight(); // Set initial value
