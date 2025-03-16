@@ -110,7 +110,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
         )}
         {title}
       </h3>
-      <div className="mt-2">{children}</div>
+      <div className="mt-2 text-left">{children}</div>
     </div>
   );
 
@@ -238,7 +238,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
                 </span>
 
                 {project.current_status.next_steps.length > 0 && (
-                  <div className="mt-2">
+                  <div className="mt-2 text-left">
                     <span className="font-semibold text-muted-foreground">
                       {t("Next Steps")}:
                     </span>

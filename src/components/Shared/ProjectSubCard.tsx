@@ -114,20 +114,8 @@ const ProjectSubCard: React.FC<ProjectSubCardProps> = ({ project }) => {
             {techStack?.map((stack, index) => (
               <span key={index} className="inline !text-muted">
                 <Typography variant="small" className="!text-muted-foreground">
-                  {stack.name}
+                  {stack.name} {index < techStack.length - 1 ? " | " : ""}
                 </Typography>
-                {/* Add separator if it's not the last item */}
-                {index < techStack.length - 1 ? (
-                  <span>
-                    <Typography
-                      variant="small"
-                      className="!text-muted-foreground"
-                    >
-                      {" "}
-                      |
-                    </Typography>
-                  </span>
-                ) : null}
               </span>
             ))}
           </div>
