@@ -3,7 +3,7 @@
     "title": "Jurutera Perisian",
     "company": "INVOKE Solutions Sdn. Bhd.",
     "date": "Okt 2023 - Kini",
-    "description": "Bermula sebagai pelatih yang mengendalikan pembangunan full-stack menggunakan Express.js (Node.js) dan React, serta penyesuaian WordPress. Kini, sebagai Jurutera Perisian di INVOKE Solutions, saya membangunkan UI responsif dengan Next.js dan Tailwind CSS serta mengendalikan pembangunan backend Laravel, membina API RESTful, dan mengurus pangkalan data MySQL.",
+    "description": "Bermula sebagai pelatih yang terlibat dalam pembangunan full-stack menggunakan Express.js (Node.js) dan React, serta menyesuaikan dan mengkonfigurasi WordPress. Kini, sebagai Jurutera Perisian di INVOKE Solutions, saya membangunkan UI responsif dengan Next.js dan Tailwind CSS, mengendalikan pembangunan backend Laravel, membina API RESTful, serta mengurus pangkalan data MySQL.",
     "stack": [
       "Next.js",
       "React",
@@ -18,14 +18,14 @@
     "title": "Jurutera Perisian (PLC)",
     "company": "RS-Simulation Asia Sdn. Bhd.",
     "date": "Apr 2019 - Sept 2023",
-    "description": "Saya membangunkan dan mengubah suai program PLC dalam CoDeSys menggunakan Function Block Diagram dan Structured Text. Selain itu, saya membina aplikasi web dalaman menggunakan Django dan Bootstrap untuk aliran kerja dalaman.",
+    "description": "Membangunkan dan mengubah suai program PLC dalam CoDeSys menggunakan Function Block Diagram dan Structured Text. Selain itu, saya membangunkan aplikasi web dalaman dengan Django dan Bootstrap untuk memperkemas aliran kerja syarikat.",
     "stack": ["Django", "Bootstrap", "JavaScript", "CSS", "PostgreSQL"]
   },
   {
     "title": "Jurutera Automasi R&D",
     "company": "JKS Engineering Sdn. Bhd.",
     "date": "Nov 2017 - Dis 2018",
-    "description": "Mereka konsep sistem automasi 3D dan menghasilkan lukisan teknikal menggunakan SolidWorks. Peranan ini mengukuhkan kemahiran penyelesaian masalah saya, yang kemudian saya terapkan dalam pembangunan perisian.",
+    "description": "Mereka bentuk sistem automasi 3D dan menghasilkan lukisan teknikal menggunakan SolidWorks. Peranan ini mengasah kemahiran saya dalam penyelesaian masalah, yang saya manfaatkan dalam pembangunan perisian.",
     "stack": ["SolidWorks"]
   }
 ]
