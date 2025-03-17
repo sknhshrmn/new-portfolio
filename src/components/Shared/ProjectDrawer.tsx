@@ -212,11 +212,9 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
               <InnerCard title={t("Impact")}>
                 <ul className="list-disc list-inside text-gray-600">
                   <span className="!text-foreground">
-                    {Object.entries(project.impact).map(
-                      ([_key, value], index) => (
-                        <li key={index}>{value}</li>
-                      )
-                    )}
+                    {Object.entries(project.impact).map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
                   </span>
                 </ul>
               </InnerCard>
@@ -226,11 +224,9 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
               <InnerCard title={t("My Role")}>
                 <ul className="list-disc list-inside text-gray-600">
                   <span className="!text-foreground">
-                    {Object.entries(project.my_role).map(
-                      ([_key, value], index) => (
-                        <li key={index}>{value}</li>
-                      )
-                    )}
+                    {project.my_role.map((role: string, index: number) => (
+                      <li key={index}>{role}</li>
+                    ))}
                   </span>
                 </ul>
               </InnerCard>
