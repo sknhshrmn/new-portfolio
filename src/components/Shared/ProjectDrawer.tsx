@@ -220,14 +220,12 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
               </InnerCard>
             )}
 
-            {project.my_role && project.my_role.length > 0 && (
+            {Array.isArray(project.my_role) && project.my_role.length > 0 && (
               <InnerCard title={t("My Role")}>
                 <ul className="list-disc list-inside text-gray-600">
-                  <span className="!text-foreground">
-                    {project.my_role.map((role: string, index: number) => (
-                      <li key={index}>{role}</li>
-                    ))}
-                  </span>
+                  {project.my_role.map((role, index) => (
+                    <li key={index}>{role}</li>
+                  ))}
                 </ul>
               </InnerCard>
             )}

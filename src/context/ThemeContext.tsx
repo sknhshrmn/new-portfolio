@@ -25,7 +25,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
       setTheme(storedTheme);
     }
     setMounted(true);
-  }, []);
+  }, [mounted]);
 
   useEffect(() => {
     if (mounted) {

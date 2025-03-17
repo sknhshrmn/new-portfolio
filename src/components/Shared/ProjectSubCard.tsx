@@ -136,8 +136,8 @@ const ProjectSubCard: React.FC<ProjectSubCardProps> = ({ project }) => {
         <ProjectScreenshots
           open={modalOpen}
           onClose={handleModalClose}
-          title={selectedProject?.title}
-          images={selectedProject?.screenshots}
+          title={title}
+          images={screenshots}
         />
       )}
     </div>
