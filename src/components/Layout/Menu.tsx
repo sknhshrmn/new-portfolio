@@ -11,29 +11,62 @@ import { useTranslations } from "next-intl";
 const Menu: React.FC = () => {
   const t = useTranslations("Menu");
 
-  const { scrollY } = useScroll(); // Tracks scroll position
-  const [windowHeight, setWindowHeight] = useState(
-    typeof window !== "undefined" ? window.innerHeight : 800
+  const [menuPosition, setMenuPosition] = useState<"top" | "bottom">("top");
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState<"up" | "down" | null>(
+    null
   );
+  const [lockPosition, setLockPosition] = useState<number | null>(null); // Stores the scroll position where it moved down
+  const scrollThreshold = 50; // Prevents unnecessary state updates
 
   useEffect(() => {
-    const updateHeight = () => setWindowHeight(window.innerHeight);
+    let timeoutId: NodeJS.Timeout;
 
-    updateHeight(); // Set initial value
-    window.addEventListener("resize", updateHeight);
-    return () => window.removeEventListener("resize", updateHeight);
-  }, []);
+    const handleScroll = () => {
+      clearTimeout(timeoutId);
+      const currentScrollY = window.scrollY;
+      const section1Height = window.innerHeight * 0.6;
 
-  // Moves header from top (0) to bottom (100vh - height) smoothly
-  const yPosition = useTransform(
-    scrollY,
-    [0, windowHeight * 0.6, windowHeight], // Delay movement until 90% of page height
-    ["0%", "0%", "calc(100vh - 4.5rem)"] // Stay at top, then transition down
-  );
+      timeoutId = setTimeout(() => {
+        // Determine direction
+        if (currentScrollY > lastScrollY + scrollThreshold) {
+          setScrollDirection("down");
+        } else if (currentScrollY < lastScrollY - scrollThreshold) {
+          setScrollDirection("up");
+        }
+
+        // Move menu to bottom when scrolling down & set lock position
+        if (scrollDirection === "down" && menuPosition === "top") {
+          setMenuPosition("bottom");
+          setLockPosition(currentScrollY); // Store the scroll position where it moved down
+        }
+
+        // Move back to top **only when scrolling up past the lock position**
+        if (
+          scrollDirection === "up" &&
+          lockPosition !== null &&
+          currentScrollY <= lockPosition
+        ) {
+          setMenuPosition("top");
+          setLockPosition(null); // Reset lock once back at original position
+        }
+
+        setLastScrollY(currentScrollY);
+      }, 100); // Debounce to prevent flickering
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timeoutId);
+    };
+  }, [lastScrollY, scrollDirection, menuPosition, lockPosition]);
 
   return (
     <motion.header
-      style={{ y: yPosition }}
+      initial={{ y: 0 }}
+      animate={{ y: menuPosition === "top" ? 0 : "calc(100vh - 5rem)" }}
+      transition={{ duration: 0.4, ease: "easeOut" }} // Smooth animation
       className="fixed top-3 transition-all duration-300 z-50"
     >
       <nav

@@ -122,7 +122,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
           <SheetTitle className="text-xl font-bold text-primary">
             {project.title}
           </SheetTitle>
-          <SheetDescription className="overflow-y-auto max-h-[85vh] space-y-6 py-4 scrollbar-hide">
+          <SheetDescription className="overflow-y-auto max-h-[90vh] space-y-6 py-4 scrollbar-hide">
             <InnerCard title={t("Description")}>
               <div className="!text-foreground">
                 {project.description || t("No description available")}
