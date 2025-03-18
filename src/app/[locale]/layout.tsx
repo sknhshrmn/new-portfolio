@@ -36,13 +36,6 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>
             <div className="relative grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen px-4 pt-20 pb-8 sm:pt-8 sm:pb-10 max-w-[1200px] mx-auto">
-              <Head>
-                <meta
-                  http-equiv="Content-Language"
-                  content={locale === "my" ? "ms" : "en"}
-                />
-                <meta name="google" content="notranslate" />
-              </Head>
               <div className="w-full flex justify-between items-center ">
                 <ToggleLanguage />
                 <ThemeSwitch />

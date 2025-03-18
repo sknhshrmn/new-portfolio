@@ -40,11 +40,11 @@
     ],
     "users": ["HR Admin", "Employees"],
     "keyFeatures": [
-      "Clock-in/out functionality – Enables employees to record attendance accurately.",
-      "Attendance tracking – Provides real-time attendance data for staff and admins.",
-      "Shift management – Allows dynamic customization of shifts and working hours.",
-      "Overtime calculations – Automates overtime tracking and calculations.",
-      "Attendance status categories – Ongoing, Absent, Present, Late, Incomplete, Late & Incomplete, On Leave."
+      "Easy clock-in/out",
+      "Real-time attendance tracking",
+      "Customizable shifts and hours",
+      "Accurate overtime calculation",
+      "Clear attendance statuses: Ongoing, Absent, Present, Late, Incomplete, On Leave"
     ],
     "status": "First version deployed with clock-in/out features. Currently refining shift management, and fixing bugs.",
     "problem_solution": {
@@ -69,11 +69,11 @@
       "Enhanced HRMS adoption by eliminating third-party reliance."
     ],
     "my_role": [
-      "Designed the attendance tracking database schema (ERD).",
-      "Developed APIs for clock-in/out, shift management, and tracking.",
-      "Implemented attendance status logic alongside with cron jobs.",
-      "Validated data and conducted integration testing.",
-      "Collaborated with frontend for seamless API integration."
+      "Designed database schema (ERD)",
+      "Developed APIs",
+      "Implemented attendance logic and cron jobs",
+      "Validated data and tested integrations",
+      "Collaborated with frontend for API integration"
     ],
     "key_takeaways": {
       "technical_growth": [
@@ -89,19 +89,19 @@
       ]
     },
     "current_status": {
-      "development": "First version deployed with working clock-in/out, attendance list, and shift management. Phase two is in progress to fix bugs and improve functionality.",
+      "development": "Version one deployed with clock-in/out, attendance, and shift management. Phase two ongoing to fix bugs and improve features.",
       "next_steps": [
-        "Enhance shift management",
-        "Resolve remaining legacy bugs",
-        "Finalize deployment as a TENCENT partner"
+        "Improve shift management",
+        "Fix remaining bugs",
+        "Finalize TENCENT partnership deployment"
       ]
     }
   },
   {
     "id": 2,
-    "title": "PactOnline - B2B, Will Management & Ticketing System (Built with Next.js)",
+    "title": "PactOnline - B2B, Will Management & Ticketing System",
     "type": "Frontend",
-    "description": "A frontend application developed for Pacific Trustee Company to facilitate B2B interactions, will management, and ticketing for agents, partners, admins, and staff. My focus was primarily on the B2B platform and will management system.",
+    "description": "Frontend app for Pacific Trustee company, focusing on B2B interactions and will management.",
     "techStack": [
       {
         "name": "Next.js",
@@ -136,14 +136,14 @@
       "Client"
     ],
     "keyFeatures": [
-      "B2B Platform for Will Sales",
-      "Will Management System for Clients & Admins",
-      "Ticketing System for Issue Tracking",
-      "Progress Tracking for Will Processing",
-      "Responsive Mobile-Friendly UI",
-      "Efficient API Integration"
+      "B2B platform for will sales",
+      "Will management system for clients, admins, agents & partners",
+      "Progress tracking for will processing",
+      "Responsive, mobile-friendly UI",
+      "Template builder for will draft",
+      "Payment gateway integration"
     ],
-    "status": "Part of the frontend team from February 2024 to November 2024. Transitioned out of the team after November 2024.",
+    "status": " Frontend team member from February to November 2024, transitioned out after November.",
     "problem_solution": {
       "problem": [
         "Custom features were requested outside the original user stories, requiring analysis.",
@@ -163,14 +163,11 @@
       "Initiated the development of a complex feature, passed to the next developer."
     ],
     "my_role": [
-      "Developed frontend components in React.js and Next.js.",
-      "Implemented state management using React hooks (useState, useReducer, custom hooks).",
-      "Integrated REST APIs with Axios for seamless backend communication.",
-      "Translated Figma designs into responsive web components for consistent UI/UX.",
-      "Collaborated with backend developers to optimize API performance.",
-      "Used TanStack Query for efficient data fetching and caching.",
-      "Implemented form validation with React Hook Form and integrated validation libraries.",
-      "Designed UI components with ShadCN to maintain a consistent design system."
+      "Developed frontend components with Next.js.",
+      "Integrated REST APIs using Axios.",
+      "Translated Figma designs into responsive web components.",
+      "Optimized API performance with backend collaboration.",
+      "Implemented form validation and UI design consistency."
     ],
     "key_takeaways": {
       "technical_growth": [
@@ -186,13 +183,12 @@
       ]
     },
     "current_status": {
-      "development": "Live after the first phase, with bug fixes and database migrations handled by the new team.",
+      "development": "Live after phase one, with bug fixes and database migrations managed by the new team.",
       "next_steps": [
-        "Migrate the database for future updates.",
+        "Migrate database for future updates.",
         "Deploy updates to production.",
-        "Address any bugs reported by client."
-      ],
-      "note": "I transitioned out of the team after the initial phase, and the ongoing tasks are now managed by another developer."
+        "Fix bugs reported by the client."
+      ]
     },
     "screenshots": [
       {
@@ -228,9 +224,9 @@
   },
   {
     "id": 3,
-    "title": "Database Management & Reporting System for Service Engineers (Built with Django)",
+    "title": "Database Management & Reporting System for Service Engineers",
     "type": "Full-Stack",
-    "description": "A powerful internal app that streamlines service reports, manages chamber data, and enhances customer tracking for better efficiency and security.",
+    "description": "An internal app designed to streamline service reporting, manage machine data, and enhance customer tracking.",
     "techStack": [
       {
         "name": "Django",
@@ -251,16 +247,21 @@
       {
         "name": "Django Translation Package",
         "description": "Provides multilingual support (English & German) using Django's translation framework"
+      },
+      {
+        "name": "Bitnami VM",
+        "description": "Deployment in Virtual Machine by Bitnami in on-premise PC"
       }
     ],
     "users": ["Service Engineers", "Database Admins", "Stockist"],
     "keyFeatures": [
-      "Centralized Database",
-      "Role-Based Access Control",
-      "Automated Report ID Issuance",
-      "Asynchronous Data Fetching",
-      "Django Admin Panel",
-      "Bilingual Support (English & German)"
+      "Centralized database",
+      "Role-based access control",
+      "Automated report ID issuance",
+      "Asynchronous data fetching",
+      "Django admin panel",
+      "Bilingual support (English & German)",
+      "Deployment on virtual machine"
     ],
     "status": "Under testing & refinement.",
     "problem_solution": {
@@ -285,11 +286,10 @@
       "Support for English and German languages."
     ],
     "my_role": [
-      "Designed and developed both backend (Django, PostgreSQL) and frontend.",
-      "Implemented efficient database structures and optimized queries for performance.",
-      "Improved API response times for a smoother user experience.",
-      "Handled bug fixes, feature expansions, and system refinements.",
-      "Added bilingual support using Django's translation system."
+      "Designed and developed the entire system, both frontend and backend.",
+      "Designed the UI for an intuitive, user-friendly experience.",
+      "Implemented bilingual support (English & German).",
+      "Handled bug fixes, performance improvements, and feature updates on a regular basis."
     ],
     "key_takeaways": {
       "technical_growth": [
@@ -306,7 +306,7 @@
     },
     "current_status": {
       "development": "Under testing and refinement.",
-      "next_steps": ["Feature enhancements.", "Advanced reporting integration."]
+      "next_steps": ["Feature enhancements."]
     },
     "screenshots": [
       { "caption": "Homepage (English)", "url": "/images/django/homepage.png" },

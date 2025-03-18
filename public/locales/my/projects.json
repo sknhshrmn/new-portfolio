@@ -40,11 +40,11 @@
     ],
     "users": ["Pentadbir HR", "Pekerja"],
     "keyFeatures": [
-      "Fungsi clock-in/out – Membolehkan pekerja merekod kehadiran dengan tepat.",
-      "Pemantauan kehadiran – Memberikan data kehadiran terkini kepada staf dan pentadbir.",
-      "Pengurusan syif – Membolehkan penyusunan dan penyesuaian waktu kerja secara fleksibel.",
-      "Pengiraan kerja lebih masa – Mengautomasikan pengiraan kerja lebih masa.",
-      "Kategori status kehadiran – Sedang bertugas, Tidak Hadir, Hadir, Lewat, Tidak Lengkap, Lewat & Tidak Lengkap, Cuti."
+      "Fungsi clock-in/out yang mudah",
+      "Pemantauan kehadiran secara masa nyata",
+      "Pengurusan syif yang fleksibel",
+      "Pengiraan kerja lebih masa yang tepat",
+      "Kategori status kehadiran: Sedang bertugas, Tidak Hadir, Hadir, Lewat, Tidak Lengkap, Cuti"
     ],
     "status": "Versi pertama telah dilancarkan dengan ciri clock-in/clock-out. Kini dalam proses menambah baik pengurusan syif serta membetulkan pepijat.",
     "problem_solution": {
@@ -68,11 +68,11 @@
       "Meningkatkan penggunaan HRMS dengan menghapuskan kebergantungan kepada pihak ketiga."
     ],
     "my_role": [
-      "Mereka bentuk skema pangkalan data pemantauan kehadiran (ERD).",
-      "Membangunkan API untuk clockin/out, pengurusan syif, dan pemantauan.",
-      "Melaksanakan logik status kehadiran menggunakan cron job.",
-      "Mengesahkan data dan menjalankan ujian integrasi.",
-      "Bekerjasama dengan frontend untuk integrasi API yang lancar."
+      "Reka bentuk skema pangkalan data (ERD)",
+      "Membangunkan API",
+      "Melaksanakan logik status kehadiran dan cron jobs",
+      "Mengesahkan data dan menguji integrasi",
+      "Berkolaborasi dengan frontend untuk integrasi API"
     ],
     "key_takeaways": {
       "technical_growth": [
@@ -88,7 +88,7 @@
       ]
     },
     "current_status": {
-      "development": "Versi pertama telah dilancarkan dengan ciri masuk/keluar yang berfungsi, senarai kehadiran, dan pengurusan syif. Fasa dua sedang dijalankan untuk membetulkan pepijat dan menambah baik fungsi.",
+      "development": "Versi pertama dikeluarkan dengan fungsi clock-in/out, senarai kehadiran, dan pengurusan syif. Fasa kedua sedang berjalan untuk membaiki pepijat dan meningkatkan ciri.",
       "next_steps": [
         "Menambah baik pengurusan syif",
         "Menyelesaikan baki pepijat sistem lama",
@@ -98,9 +98,9 @@
   },
   {
     "id": 2,
-    "title": "PactOnline - Sistem Pengurusan B2B, Wasiat & Tiket (Dibina dengan Next.js)",
+    "title": "PactOnline - Sistem Pengurusan B2B, Wasiat & Tiket",
     "type": "Frontend",
-    "description": "Aplikasi frontend yang dibangunkan untuk Pacific Trustee Company bagi memudahkan interaksi B2B, pengurusan wasiat, serta sistem tiket untuk ejen, rakan kongsi, pentadbir, dan kakitangan.",
+    "description": "Aplikasi frontend untuk syarikat Pacific Trustee, fokus pada interaksi B2B dan pengurusan wasiat.",
     "techStack": [
       {
         "name": "Next.js",
@@ -135,14 +135,14 @@
       "Pelanggan"
     ],
     "keyFeatures": [
-      "Platform B2B untuk Jualan Wasiat",
-      "Sistem Pengurusan Wasiat untuk Pelanggan & Pentadbir",
-      "Sistem Tiket untuk Penjejakan Masalah",
-      "Penjejakan Kemajuan Pemprosesan Wasiat",
-      "UI Responsif dan Mesra Telefon Bimbit",
-      "Integrasi API yang Cekap"
+      "Platform B2B untuk jualan wasiat",
+      "Sistem pengurusan wasiat untuk pelanggan, pentadbir, ejen & rakan kongsi",
+      "Pengesanan kemajuan pemprosesan wasiat",
+      "UI responsif dan mesra telefon bimbit",
+      "Pembina templat untuk draf wasiat",
+      "Integrasi gateway pembayaran"
     ],
-    "status": "Ahli pasukan frontend dari Februari hingga November 2024. Berpindah ke peranan lain selepas itu.",
+    "status": "Ahli pasukan frontend dari Februari hingga November 2024, beralih keluar selepas November.",
     "problem_solution": {
       "problem": [
         "Permintaan ciri khas di luar skop cerita pengguna asal memerlukan analisis tambahan dan penyelarasan dengan pelanggan.",
@@ -162,14 +162,11 @@
       "Menyiapkan asas pembangunan ciri kompleks bagi memastikan kesinambungan yang lancar untuk pembangun seterusnya."
     ],
     "my_role": [
-      "Membangunkan komponen frontend dalam React.js dan Next.js.",
-      "Menguruskan state aplikasi menggunakan React Hooks seperti useState, useReducer, dan custom hooks.",
-      "Mengintegrasikan REST API menggunakan Axios bagi memastikan komunikasi backend yang lancar.",
-      "Menukarkan reka bentuk Figma kepada komponen web responsif bagi mengekalkan konsistensi UI/UX.",
-      "Bekerjasama dengan pembangun backend untuk mengoptimumkan prestasi API.",
-      "Menggunakan TanStack Query untuk pengambilan data serta caching yang cekap.",
-      "Melaksanakan pengesahan borang dengan React Hook Form dan mengintegrasikan pustaka pengesahan.",
-      "Membangunkan komponen UI menggunakan ShadCN bagi memastikan sistem reka bentuk yang konsisten."
+      "Membangunkan komponen frontend dengan Next.js.",
+      "Integrasi API REST menggunakan Axios.",
+      "Menterjemah reka bentuk Figma ke dalam komponen web responsif.",
+      "Mengoptimumkan prestasi API dengan kerjasama backend.",
+      "Melaksanakan pengesahan borang dan konsistensi reka bentuk UI."
     ],
     "key_takeaways": {
       "technical_growth": [
@@ -184,13 +181,12 @@
       ]
     },
     "current_status": {
-      "development": "Sistem kini telah dilancarkan selepas fasa pertama, dengan pembetulan pepijat serta migrasi pangkalan data dikendalikan oleh pasukan baharu.",
+      "development": "Telah dilancarkan selepas fasa pertama, dengan pembaikan bug dan migrasi pangkalan data dikendalikan oleh pasukan baru.",
       "next_steps": [
         "Migrasi pangkalan data untuk kemas kini seterusnya.",
         "Menghantar kemas kini ke produksi.",
         "Menangani sebarang pepijat yang dilaporkan oleh pelanggan."
-      ],
-      "note": "Saya telah meninggalkan pasukan selepas fasa pertama, dan tugas berterusan kini diuruskan oleh pembangun lain."
+      ]
     },
     "screenshots": [
       {
@@ -228,7 +224,7 @@
     "id": 3,
     "title": "Sistem Pengurusan Pangkalan Data & Laporan untuk Jurutera Servis (Dibina dengan Django)",
     "type": "Full-Stack",
-    "description": "Aplikasi dalaman yang berkuasa untuk menyelaraskan laporan servis, mengurus data komponen mesin ujian, dan memperkemaskan pemantauan pelanggan bagi kecekapan serta keselamatan yang lebih baik",
+    "description": "Aplikasi dalaman yang direka untuk mempermudah pelaporan perkhidmatan, menguruskan data mesin, dan meningkatkan pemantauan pelanggan.",
     "techStack": [
       {
         "name": "Django",
@@ -253,12 +249,13 @@
     ],
     "users": ["Jurutera Servis", "Pentadbir Pangkalan Data", "Penyimpan Stok"],
     "keyFeatures": [
-      "Pangkalan Data Terpusat",
-      "Kawalan Akses Berdasarkan Peranan",
-      "Penjanaan ID Laporan Automatik",
-      "Pengambilan Data Asinkron",
-      "Panel Admin Django",
-      "Sokongan Pelbagai Bahasa (Inggeris & Jerman)"
+      "Pangkalan data terpusat",
+      "Kawalan akses berdasarkan peranan",
+      "Penjanaan ID laporan automatik",
+      "Pengambilan data asinkron",
+      "Panel admin Django",
+      "Sokongan pelbagai bahasa (Inggeris & Jerman)",
+      "Pelancaran pada mesin maya"
     ],
     "status": "Dalam fasa ujian dan penambahbaikan.",
     "problem_solution": {
@@ -283,11 +280,10 @@
       "Sokongan untuk bahasa Inggeris dan Jerman."
     ],
     "my_role": [
-      "Mereka bentuk dan membangunkan backend (Django, PostgreSQL) serta frontend.",
-      "Melaksanakan struktur pangkalan data yang cekap dan mengoptimumkan kueri untuk prestasi yang lebih baik.",
-      "Menambah baik masa tindak balas API bagi pengalaman pengguna yang lebih lancar.",
-      "Menangani pembaikan pepijat, pengembangan ciri, dan penambahbaikan sistem.",
-      "Menambah sokongan dwibahasa menggunakan sistem terjemahan Django."
+      "Reka bentuk dan membangunkan keseluruhan sistem, termasuk frontend dan backend.",
+      "Reka bentuk UI untuk pengalaman pengguna yang intuitif dan mesra pengguna.",
+      "Melaksanakan sokongan dwibahasa (Bahasa Inggeris & Jerman).",
+      "Menangani pembetulan pepijat, penambahbaikan prestasi, dan kemas kini ciri secara berkala."
     ],
     "key_takeaways": {
       "technical_growth": [
@@ -304,7 +300,7 @@
     },
     "current_status": {
       "development": "Sedang dalam fasa ujian dan penambahbaikan.",
-      "next_steps": ["Penambahbaikan ciri.", "Integrasi pelaporan lanjutan."]
+      "next_steps": ["Penambahbaikan ciri."]
     },
     "screenshots": [
       {
