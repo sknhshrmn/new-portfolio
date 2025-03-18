@@ -113,6 +113,7 @@ const ProjectSubCard: React.FC<ProjectSubCardProps> = ({ project }) => {
               alt={t("Screenshot of the app")}
               className="thumbnail-image"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         </div>
