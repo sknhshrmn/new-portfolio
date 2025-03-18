@@ -25,7 +25,6 @@ const Menu: React.FC = () => {
     const handleScroll = () => {
       clearTimeout(timeoutId);
       const currentScrollY = window.scrollY;
-      const section1Height = window.innerHeight * 0.6;
 
       timeoutId = setTimeout(() => {
         // Determine direction
