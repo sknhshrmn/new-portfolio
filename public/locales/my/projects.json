@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Modul Kehadiran Masa HRMS",
+    "title": "Modul Kehadiran Masa HRMS (AdnexioHR)",
     "type": "Backend",
     "description": "Membangunkan Modul Kehadiran Masa sebagai ciri baharu dalam Sistem Pengurusan Sumber Manusia (HRMS) untuk merekod kehadiran pekerja dan mengurus syif.",
     "techStack": [
@@ -94,7 +94,58 @@
         "Menyelesaikan baki pepijat sistem lama",
         "Memuktamadkan pelancaran sebagai rakan kongsi TENCENT"
       ]
-    }
+    },
+    "screenshots": [
+      {
+        "caption": "Papan Pemuka Kehadiran Masa (Staf)",
+        "url": "/images/adnexioHR/dashboard.png"
+      },
+      {
+        "caption": "Masa Masuk Semasa Shift",
+        "url": "/images/adnexioHR/clockin.png"
+      },
+      {
+        "caption": "Masa Keluar Semasa Shift",
+        "url": "/images/adnexioHR/clockout.png"
+      },
+      {
+        "caption": "Selepas Keluar Masa",
+        "url": "/images/adnexioHR/after-clockout.png"
+      },
+      {
+        "caption": "Paparan Kalendar Kehadiran Staf (Pentadbir)",
+        "url": "/images/adnexioHR/calendar-view.png"
+      },
+      {
+        "caption": "Paparan Harian Kehadiran Staf (Pentadbir)",
+        "url": "/images/adnexioHR/daily-view.png"
+      },
+      {
+        "caption": "Paparan Individu Kehadiran Staf  (Pentadbir)",
+        "url": "/images/adnexioHR/individual-view.png"
+      },
+      {
+        "caption": "Senarai Shift yang Dicipta",
+        "url": "/images/adnexioHR/list-shift.png"
+      },
+      {
+        "caption": "Borang Cipta Shift - Umum",
+        "url": "/images/adnexioHR/create-shift-general.png"
+      },
+      {
+        "caption": "Borang Cipta Shift - Waktu Bekerja",
+        "url": "/images/adnexioHR/create-shift-working-hours.png"
+      },
+      {
+        "caption": "Borang Cipta Shift - Penjadualan Tugas",
+        "url": "/images/adnexioHR/create-shift-duty-rostering.png"
+      },
+      {
+        "caption": "Borang Cipta Shift - Lanjutan",
+        "url": "/images/adnexioHR/create-shift-advanced.png"
+      }
+    ],
+    "thumbnail": "/images/adnexioHR/adnexioHR-thumbnail.png"
   },
   {
     "id": 2,

@@ -7,6 +7,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import Menu from "@/src/components/Layout/Menu";
 import ToggleLanguage from "@/src/components/Layout/ToggleLanguage";
+import Footer from "@/src/components/Layout/Footer";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Sakinah Shahriman",
@@ -42,17 +44,10 @@ export default async function LocaleLayout({
               <Menu />
               {children}
             </div>
+            <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
-      <footer className="bg-gray-800 text-white py-6 mt-10">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-sm">
-            &copy; {new Date().getFullYear()} Sakinah Shahriman. All Rights
-            Reserved.
-          </p>
-        </div>
-      </footer>
     </html>
   );
 }

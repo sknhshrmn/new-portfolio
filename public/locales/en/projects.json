@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "HRMS Time Attendance Module",
+    "title": "HRMS Time Attendance Module (AdnexioHR)",
     "type": "Backend",
     "description": "Developed a Time Attendance Module as a new feature within the existing HR Management System (HRMS) to track employee attendance, and manage shift.",
     "techStack": [
@@ -95,7 +95,58 @@
         "Fix remaining bugs",
         "Finalize TENCENT partnership deployment"
       ]
-    }
+    },
+    "screenshots": [
+      {
+        "caption": "Time Attendance Dashboard (Staff)",
+        "url": "/images/adnexioHR/dashboard.png"
+      },
+      {
+        "caption": "Clock-in during shift",
+        "url": "/images/adnexioHR/clockin.png"
+      },
+      {
+        "caption": "Clock-out during shift",
+        "url": "/images/adnexioHR/clockout.png"
+      },
+      {
+        "caption": "After done clocked-out",
+        "url": "/images/adnexioHR/after-clockout.png"
+      },
+      {
+        "caption": "Staff Attendance Calendar View (Admin)",
+        "url": "/images/adnexioHR/calendar-view.png"
+      },
+      {
+        "caption": "Daily View of Staff Attendance (Admin)",
+        "url": "/images/adnexioHR/daily-view.png"
+      },
+      {
+        "caption": "Individual Staff Attendance View (Admin)",
+        "url": "/images/adnexioHR/individual-view.png"
+      },
+      {
+        "caption": "List of Created Shifts",
+        "url": "/images/adnexioHR/list-shift.png"
+      },
+      {
+        "caption": "Create Shift Form - General",
+        "url": "/images/adnexioHR/create-shift-general.png"
+      },
+      {
+        "caption": "Create Shift Form - Working Hours",
+        "url": "/images/adnexioHR/create-shift-working-hours.png"
+      },
+      {
+        "caption": "Create Shift Form - Duty Rostering",
+        "url": "/images/adnexioHR/create-shift-duty-rostering.png"
+      },
+      {
+        "caption": "Create Shift Form - Advanced",
+        "url": "/images/adnexioHR/create-shift-advanced.png"
+      }
+    ],
+    "thumbnail": "/images/adnexioHR/adnexioHR-thumbnail.png"
   },
   {
     "id": 2,
