@@ -118,7 +118,7 @@ const ProjectSubCard: React.FC<ProjectSubCardProps> = ({ project }) => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between w-full sm:w-[50%]">
+        <div className="flex flex-col justify-between w-full sm:w-[50%] gap-2">
           {/* Description */}
           <Typography variant="p" className="!text-foreground">
             {description}
