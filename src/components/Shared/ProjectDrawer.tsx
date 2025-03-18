@@ -117,12 +117,11 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
 
   return (
     <Sheet open={open} onOpenChange={onClose}>
-      <SheetContent className="w-full sm:w-[500px] bg-card text-card-foreground border border-border shadow-lg pb-0 scrollbar-hide">
+      <SheetContent className="w-full w-[85%] sm:w-[500px] bg-card text-card-foreground border border-border shadow-lg pb-0 scrollbar-hide">
         <SheetHeader>
           <SheetTitle className="text-xl font-bold text-primary">
             {project.title}
           </SheetTitle>
-
           <SheetDescription className="overflow-y-auto max-h-[85vh] space-y-6 py-4 scrollbar-hide">
             <InnerCard title={t("Description")}>
               <div className="!text-foreground">

@@ -17,7 +17,9 @@ export default function ToggleLanguage() {
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000`;
 
     // Change the URL and reload instantly
-    window.location.href = `/${newLocale}${pathWithoutLocale}`;
+    setTimeout(() => {
+      window.location.href = `/${newLocale}${pathWithoutLocale}`;
+    }, 500);
   };
 
   return (
