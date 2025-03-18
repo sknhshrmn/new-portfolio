@@ -4,7 +4,7 @@ import Link from "next/link";
 import { CiLinkedin } from "react-icons/ci";
 import { FaHome } from "react-icons/fa";
 import { Button } from "../ui/button";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 
