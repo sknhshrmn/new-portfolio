@@ -117,13 +117,13 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
 
   return (
     <Sheet open={open} onOpenChange={onClose}>
-      <SheetContent className="w-full sm:w-[900px] bg-card text-card-foreground border border-border shadow-lg pb-0 scrollbar-hide">
+      <SheetContent className="w-full sm:w-[500px] bg-card text-card-foreground border border-border shadow-lg pb-0 scrollbar-hide">
         <SheetHeader>
           <SheetTitle className="text-xl font-bold text-primary">
             {project.title}
           </SheetTitle>
 
-          <SheetDescription className="overflow-y-auto max-h-[92vh] space-y-6 py-4 scrollbar-hide">
+          <SheetDescription className="overflow-y-auto max-h-[85vh] space-y-6 py-4 scrollbar-hide">
             <InnerCard title={t("Description")}>
               <div className="!text-foreground">
                 {project.description || t("No description available")}
@@ -149,19 +149,26 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
 
             {project.techStack && project.techStack.length > 0 && (
               <InnerCard title={t("Tech Stack")}>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-2 gap-y-2">
                   {project.techStack.map((stack, index) => (
-                    <div
+                    // <div
+                    //   key={index}
+                    //   className="flex flex-col items-start border p-2 rounded-lg w-full"
+                    // >
+                    //   <span className="font-montserrat font-semibold">
+                    //     {stack.name}
+                    //   </span>
+                    //   <span className="!text-foreground">
+                    //     {stack.description}
+                    //   </span>
+                    // </div>
+                    <Button
                       key={index}
-                      className="flex flex-col items-start border p-2 rounded-lg w-full"
+                      variant="outline"
+                      className="!text-muted-foreground rounded-full cursor-default border-muted-foreground"
                     >
-                      <span className="font-montserrat font-semibold">
-                        {stack.name}
-                      </span>
-                      <span className="!text-foreground">
-                        {stack.description}
-                      </span>
-                    </div>
+                      <Typography variant="stack">{stack.name}</Typography>
+                    </Button>
                   ))}
                 </div>
               </InnerCard>
@@ -169,7 +176,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
 
             {project.users && project.users.length > 0 && (
               <InnerCard title={t("Users")}>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-2 gap-y-2">
                   {project.users.map((user, index) => (
                     <Button
                       key={index}
@@ -183,7 +190,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
               </InnerCard>
             )}
 
-            {project.problem_solution && (
+            {/* {project.problem_solution && (
               <InnerCard title={t("Problem & Solution")}>
                 <div className="space-y-1.5">
                   <div className="font-montserrat font-semibold text-muted-foreground">
@@ -210,9 +217,9 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
                   </div>
                 </div>
               </InnerCard>
-            )}
+            )} */}
 
-            {Array.isArray(project.impact) && project.impact.length > 0 && (
+            {/* {Array.isArray(project.impact) && project.impact.length > 0 && (
               <InnerCard title={t("Impact")}>
                 <ul className="ml-4 list-disc list-outside text-gray-600">
                   {project.impact.map((imp, index) => (
@@ -222,7 +229,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
                   ))}
                 </ul>
               </InnerCard>
-            )}
+            )} */}
 
             {Array.isArray(project.my_role) && project.my_role.length > 0 && (
               <InnerCard title={t("My Role")}>
@@ -259,7 +266,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
               </InnerCard>
             )}
 
-            {project.key_takeaways && (
+            {/* {project.key_takeaways && (
               <InnerCard title={t("Key Takeaways")}>
                 <div className="space-y-2">
                   <div className="font-semibold text-muted-foreground">
@@ -288,7 +295,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
                   </ul>
                 </div>
               </InnerCard>
-            )}
+            )} */}
           </SheetDescription>
         </SheetHeader>
       </SheetContent>
