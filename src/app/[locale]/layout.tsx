@@ -7,7 +7,6 @@ import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import Menu from "@/src/components/Layout/Menu";
 import ToggleLanguage from "@/src/components/Layout/ToggleLanguage";
-import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Sakinah Shahriman",
