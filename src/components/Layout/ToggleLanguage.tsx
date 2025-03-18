@@ -19,7 +19,7 @@ export default function ToggleLanguage() {
     // Change the URL and reload instantly
     setTimeout(() => {
       window.location.href = `/${newLocale}${pathWithoutLocale}`;
-    }, 2500);
+    }, 1500);
   };
 
   return (

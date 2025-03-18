@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import Menu from "@/src/components/Layout/Menu";
 import ToggleLanguage from "@/src/components/Layout/ToggleLanguage";
 import Footer from "@/src/components/Layout/Footer";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Sakinah Shahriman",
@@ -30,6 +31,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
+      <Head>
+        <link rel="shortcut icon" href="/images/icon.ico" sizes="any" />
+      </Head>
       <body
         className={`${montserrat.variable} ${poppins.variable} bg-background text-foreground`}
       >
