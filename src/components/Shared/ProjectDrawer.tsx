@@ -117,13 +117,13 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
 
   return (
     <Sheet open={open} onOpenChange={onClose}>
-      <SheetContent className="w-full sm:w-[600px] bg-card text-card-foreground border border-border shadow-lg pb-0 scrollbar-hide">
+      <SheetContent className="w-full sm:w-[900px] bg-card text-card-foreground border border-border shadow-lg pb-0 scrollbar-hide">
         <SheetHeader>
           <SheetTitle className="text-xl font-bold text-primary">
             {project.title}
           </SheetTitle>
 
-          <SheetDescription className="overflow-y-auto max-h-[85vh] space-y-6 py-4 scrollbar-hide">
+          <SheetDescription className="overflow-y-auto max-h-[92vh] space-y-6 py-4 scrollbar-hide">
             <InnerCard title={t("Description")}>
               <div className="!text-foreground">
                 {project.description || t("No description available")}
@@ -133,10 +133,12 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
             {project.keyFeatures && project.keyFeatures.length > 0 && (
               <InnerCard title={t("Key Features")}>
                 <div className="!text-foreground">
-                  <ul className="list-disc list-inside text-foreground">
+                  <ul className="list-none text-foreground">
                     {project.keyFeatures.map((feat, index) => (
-                      <li key={index} className="flex items-center gap-2">
-                        <FaCheckCircle className="text-secondary" />
+                      <li key={index} className="flex items-start gap-3 ">
+                        <div>
+                          <FaCheckCircle className="text-secondary mt-1" />
+                        </div>
                         <span>{feat}</span>
                       </li>
                     ))}
@@ -183,34 +185,36 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
 
             {project.problem_solution && (
               <InnerCard title={t("Problem & Solution")}>
-                <div className="space-y-1">
+                <div className="space-y-1.5">
                   <div className="font-montserrat font-semibold text-muted-foreground">
                     {t("Problem")}:
                   </div>
-                  <ul className="list-disc list-inside text-gray-600">
+                  <ul className="ml-4 list-disc list-outside text-gray-600">
                     {project.problem_solution.problem.map((prob, index) => (
                       <li key={index}>
                         <span className="!text-foreground">{prob}</span>
                       </li>
                     ))}
                   </ul>
-                  <span className="font-montserrat font-semibold text-muted-foreground">
-                    {t("Solution")}:
-                  </span>
-                  <ul className="list-disc list-inside text-gray-600">
-                    {project.problem_solution.solution.map((sol, index) => (
-                      <li key={index}>
-                        <span className="!text-foreground">{sol}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div>
+                    <span className="font-montserrat font-semibold text-muted-foreground">
+                      {t("Solution")}:
+                    </span>
+                    <ul className="ml-4 list-disc list-outside text-gray-600">
+                      {project.problem_solution.solution.map((sol, index) => (
+                        <li key={index}>
+                          <span className="!text-foreground">{sol}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </InnerCard>
             )}
 
             {Array.isArray(project.impact) && project.impact.length > 0 && (
               <InnerCard title={t("Impact")}>
-                <ul className="list-disc list-inside text-gray-600">
+                <ul className="ml-4 list-disc list-outside text-gray-600">
                   {project.impact.map((imp, index) => (
                     <li key={index}>
                       <span className="!text-foreground">{imp}</span>
@@ -222,7 +226,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
 
             {Array.isArray(project.my_role) && project.my_role.length > 0 && (
               <InnerCard title={t("My Role")}>
-                <ul className="list-disc list-inside text-gray-600">
+                <ul className="ml-4 list-disc list-outside text-gray-600">
                   {project.my_role.map((role, index) => (
                     <li key={index}>
                       <span className="!text-foreground">{role}</span>
@@ -243,7 +247,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
                     <span className="font-semibold text-muted-foreground">
                       {t("Next Steps")}:
                     </span>
-                    <ul className="list-disc list-inside text-gray-600">
+                    <ul className="ml-4 list-disc list-outside text-gray-600">
                       {project.current_status.next_steps.map((step, index) => (
                         <li key={index}>
                           <span className="!text-foreground">{step}</span>
@@ -261,7 +265,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
                   <div className="font-semibold text-muted-foreground">
                     {t("Technical Growth")}:
                   </div>
-                  <ul className="list-disc list-inside text-gray-600">
+                  <ul className="ml-4 list-disc list-outside text-gray-600">
                     {project.key_takeaways.technical_growth.map(
                       (item: string, index: number) => (
                         <li key={index}>
@@ -273,7 +277,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
                   <div className="font-semibold text-muted-foreground">
                     {t("Professional Growth")}:
                   </div>
-                  <ul className="list-disc list-inside text-gray-600">
+                  <ul className="ml-4 list-disc list-outside text-gray-600">
                     {project.key_takeaways.professional_growth.map(
                       (item: string, index: number) => (
                         <li key={index}>

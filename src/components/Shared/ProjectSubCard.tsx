@@ -87,7 +87,7 @@ const ProjectSubCard: React.FC<ProjectSubCardProps> = ({ project }) => {
           {type && (
             <Typography
               variant="small"
-              className={`mt-1 w-fit px-3 py-1 text-xs font-semibold text-white whitespace-nowrap rounded-full ${
+              className={`mt-1 w-min px-3 py-1 text-xs font-semibold text-white whitespace-nowrap rounded-full ${
                 type === "Backend"
                   ? "bg-yellow-500"
                   : type === "Frontend"

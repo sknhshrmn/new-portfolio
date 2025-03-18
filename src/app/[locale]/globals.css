@@ -14,6 +14,10 @@
   max-height: 85vh !important;
 }
 
+li {
+  line-height: 1.5;
+}
+
 /* Modal */
 .carousel-item img {
   max-height: 500px; /* Adjust this based on your design */
