@@ -87,7 +87,7 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
     title: string;
     children: React.ReactNode;
   }) => (
-    <div className="border border-border rounded-lg p-4 bg-muted dark:bg-background backdrop-blur-md shadow-md">
+    <div className="border border-border rounded-lg p-4 bg-muted dark:bg-background backdrop-blur-md shadow-md min-h-fit">
       <h3 className="font-semibold flex items-center gap-2">
         {title === "Description" && (
           <FaInfoCircle className="text-yellow-400" />
