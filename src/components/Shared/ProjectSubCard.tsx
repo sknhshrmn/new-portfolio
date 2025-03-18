@@ -112,7 +112,7 @@ const ProjectSubCard: React.FC<ProjectSubCardProps> = ({ project }) => {
               src={thumbnail ?? "/images/default-thumbnail.png"}
               alt={t("Screenshot of the app")}
               className="thumbnail-image"
-              layout="fill" // Automatically fills the container dimensions
+              fill
             />
           </div>
         </div>

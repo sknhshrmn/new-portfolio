@@ -1,19 +1,23 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
 import { Switch } from "@/src/components/ui/switch"; // Adjust path as needed
 import Typography from "../Shared/Typography";
 
 export default function ToggleLanguage() {
-  const router = useRouter();
   const pathname = usePathname();
   const locale = useLocale();
 
   const toggleLocale = () => {
-    const newLocale = locale === "en" ? "my" : "en"; // Toggle between 'en' and 'my'
+    const newLocale = locale === "en" ? "my" : "en";
     const pathWithoutLocale = pathname.replace(/^\/(en|my)/, "");
-    router.push(`/${newLocale}${pathWithoutLocale}`);
+
+    // Set locale in cookie
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000`;
+
+    // Change the URL and reload instantly
+    window.location.href = `/${newLocale}${pathWithoutLocale}`;
   };
 
   return (
