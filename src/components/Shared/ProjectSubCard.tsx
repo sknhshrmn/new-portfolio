@@ -25,6 +25,7 @@ interface ImageType {
 
 interface ProjectType {
   title: string;
+  type: string;
   description?: string;
   techStack?: StackType[];
   users?: string[]; // Changed from StackType[] to string[] to match JSON
@@ -44,8 +45,15 @@ const ProjectSubCard: React.FC<ProjectSubCardProps> = ({ project }) => {
     null
   );
 
-  const { title, status, screenshots, description, techStack, thumbnail } =
-    project;
+  const {
+    title,
+    type,
+    status,
+    screenshots,
+    description,
+    techStack,
+    thumbnail,
+  } = project;
 
   const handleReadMoreClick = () => {
     setSelectedProject(project);
@@ -72,9 +80,25 @@ const ProjectSubCard: React.FC<ProjectSubCardProps> = ({ project }) => {
     <div className="w-full flex flex-col gap-6 ">
       {/* Title */}
       <div className="flex flex-col gap-2">
-        <Typography variant="h3" className="font-bold !text-primary">
-          {title}
-        </Typography>
+        <div className="flex flex-col sm:flex-row sm:space-between items-start ">
+          <Typography variant="h3" className="font-bold !text-primary">
+            {title}
+          </Typography>
+          {type && (
+            <Typography
+              variant="small"
+              className={`mt-1 w-fit px-3 py-1 text-xs font-semibold text-white whitespace-nowrap rounded-full ${
+                type === "Backend"
+                  ? "bg-yellow-500"
+                  : type === "Frontend"
+                  ? "bg-green-500"
+                  : "bg-blue-500"
+              }`}
+            >
+              {type}
+            </Typography>
+          )}
+        </div>
         <Typography variant="quote" className="!text-accent">
           {t("Status")}: {status}
         </Typography>

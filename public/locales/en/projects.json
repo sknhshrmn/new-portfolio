@@ -1,8 +1,106 @@
 [
   {
+    "id": 1,
+    "title": "HRMS Time Attendance Module",
+    "type": "Backend",
+    "description": "Developed a Time Attendance Module as a new feature within the existing HR Management System (HRMS) to track employee attendance, and manage shift.",
+    "techStack": [
+      {
+        "name": "Laravel (PHP)",
+        "description": "PHP framework for backend development"
+      },
+      {
+        "name": "MySQL",
+        "description": "Relational database for attendance data storage"
+      },
+      {
+        "name": "AWS EC2",
+        "description": "Cloud server used for staging and production deployments"
+      },
+      {
+        "name": "Laravel Queue",
+        "description": "Job queue management for background processing"
+      },
+      {
+        "name": "RESTful API",
+        "description": "Standard API design for backend communication"
+      },
+      {
+        "name": "Bruno",
+        "description": "API client for testing and debugging"
+      },
+      {
+        "name": "PHPUnit",
+        "description": "Testing framework for PHP applications"
+      },
+      {
+        "name": "PHPStan",
+        "description": "Static analysis tool for improving PHP code quality"
+      }
+    ],
+    "users": ["HR Admin", "Employees"],
+    "keyFeatures": [
+      "Clock-in/out functionality – Enables employees to record attendance accurately.",
+      "Attendance tracking – Provides real-time attendance data for staff and admins.",
+      "Shift management – Allows dynamic customization of shifts and working hours.",
+      "Overtime calculations – Automates overtime tracking and calculations.",
+      "Attendance status categories – Ongoing, Absent, Present, Late, Incomplete, Late & Incomplete, On Leave."
+    ],
+    "status": "First version deployed with clock-in/out features. Currently refining shift management, and fixing bugs.",
+    "problem_solution": {
+      "problem": [
+        "Seamless integration of the Time Attendance Module with HRMS.",
+        "Efficient processing of large attendance datasets.",
+        "Real-time and accurate attendance status updates.",
+        "Automating complex shift scheduling with minimal manual input."
+      ],
+      "solution": [
+        "Optimized API calls and queries for smooth HRMS integration.",
+        "Used job processing to handle large data efficiently, reducing system load.",
+        "Automated attendance status updates with a cron job and logic.",
+        "Conducted extensive testing to ensure shift scheduling reliability."
+      ]
+    },
+    "impact": [
+      "Deployed a Time Attendance module in HRMS.",
+      "Automated tracking, reducing manual errors.",
+      "Optimized key-based data retrieval for efficiency.",
+      "Used cron jobs for real-time status updates.",
+      "Enhanced HRMS adoption by eliminating third-party reliance."
+    ],
+    "my_role": [
+      "Designed the attendance tracking database schema (ERD).",
+      "Developed APIs for clock-in/out, shift management, and tracking.",
+      "Implemented attendance status logic alongside with cron jobs.",
+      "Validated data and conducted integration testing.",
+      "Collaborated with frontend for seamless API integration."
+    ],
+    "key_takeaways": {
+      "technical_growth": [
+        "Gained hands-on experience in Laravel backend development.",
+        "Improved database query optimization and API performance.",
+        "Handled large-scale data processing using queues.",
+        "Enhanced debugging and troubleshooting skills."
+      ],
+      "professional_growth": [
+        "Solved challenges integrating with legacy systems.",
+        "Improved collaboration with frontend developers.",
+        "Learned best practices for API documentation and handovers."
+      ]
+    },
+    "current_status": {
+      "development": "First version deployed with working clock-in/out, attendance list, and shift management. Phase two is in progress to fix bugs and improve functionality.",
+      "next_steps": [
+        "Enhance shift management",
+        "Resolve remaining legacy bugs",
+        "Finalize deployment as a TENCENT partner"
+      ]
+    }
+  },
+  {
     "id": 2,
     "title": "PactOnline - B2B, Will Management & Ticketing System (Built with Next.js)",
-    "type": "Frontend Web Application (B2B Platform & Will Management System)",
+    "type": "Frontend",
     "description": "A frontend application developed for Pacific Trustee Company to facilitate B2B interactions, will management, and ticketing for agents, partners, admins, and staff. My focus was primarily on the B2B platform and will management system.",
     "techStack": [
       {
@@ -131,7 +229,7 @@
   {
     "id": 3,
     "title": "Database Management & Reporting System for Service Engineers (Built with Django)",
-    "type": "Full-Stack Web Application (Internal System)",
+    "type": "Full-Stack",
     "description": "A powerful internal app that streamlines service reports, manages chamber data, and enhances customer tracking for better efficiency and security.",
     "techStack": [
       {

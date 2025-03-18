@@ -1,8 +1,114 @@
 [
   {
+    "id": 1,
+    "title": "Modul Kehadiran Masa HRMS",
+    "type": "Backend",
+    "description": "Membangunkan Modul Kehadiran Masa sebagai ciri baharu dalam Sistem Pengurusan Sumber Manusia (HRMS) sedia ada untuk menjejak kehadiran pekerja, waktu bekerja, dan pengurusan syif. Modul ini berintegrasi dengan sistem pengurusan pengguna dan cuti sedia ada, memastikan aliran data yang lancar.",
+    "techStack": [
+      {
+        "name": "Laravel (PHP)",
+        "description": "Kerangka kerja PHP untuk pembangunan backend"
+      },
+      {
+        "name": "MySQL",
+        "description": "Pangkalan data berhubung untuk penyimpanan data kehadiran"
+      },
+      {
+        "name": "Redis",
+        "description": "Sistem caching untuk mengoptimumkan prestasi"
+      },
+      {
+        "name": "AWS EC2",
+        "description": "Pengehosan awan untuk penyebaran produksi"
+      }
+    ],
+    "role": "Pembangun Backend",
+    "keyFeatures": [
+      "Fungsi masuk/keluar – Membolehkan pekerja merekodkan kehadiran dengan tepat.",
+      "Penjejakan kehadiran – Menyediakan data kehadiran masa nyata untuk kakitangan dan pentadbir.",
+      "Pengurusan syif – Membolehkan konfigurasi dan penjejakan jadual syif yang berbeza secara dinamik.",
+      "Pengiraan kerja lebih masa – Mengautomasi penjejakan dan pengiraan kerja lebih masa.",
+      "Status kehadiran – Berterusan, Tidak Hadir, Hadir, Lewat, Tidak Lengkap, Lewat & Tidak Lengkap, Cuti."
+    ],
+    "status": "Membangunkan Modul Kehadiran Masa dari reka bentuk awal hingga penyebaran. Versi pertama telah berjaya diterapkan dengan ciri masuk/keluar. Kini sedang mengusahakan fasa kedua untuk menambah baik pengurusan syif dan menyelesaikan pepijat yang dikenal pasti. Sebahagian tanggungjawab sedang dipindahkan kepada rakan sekerja lain, sementara masih menyokong integrasi modul ini dengan kerjasama Tencent.",
+    "problems_solutions": {
+      "problems": [
+        {
+          "title": "Integrasi Sistem Warisan",
+          "description": "Mengintegrasikan Modul Kehadiran Masa baharu dengan HRMS sedia ada sambil mengekalkan prestasi."
+        },
+        {
+          "title": "Mengendalikan Data Kehadiran yang Besar",
+          "description": "Memproses dan menyimpan jumlah rekod kehadiran yang besar dengan cekap."
+        },
+        {
+          "title": "Pengurusan Status Kehadiran",
+          "description": "Menetapkan status kehadiran dengan tepat berdasarkan rekod masuk, keluar, atau cuti."
+        },
+        {
+          "title": "Pengurusan Syif yang Terlalu Dinamik",
+          "description": "Sistem pengurusan syif mempunyai terlalu banyak kemungkinan senario, menjadikannya kompleks untuk diuji dan diterapkan dengan berkesan."
+        }
+      ],
+      "solutions": [
+        {
+          "problem": "Integrasi Sistem Warisan",
+          "description": "Mengoptimumkan panggilan API dan pertanyaan pangkalan data untuk mengurangkan beban, memastikan keserasian yang lancar dengan sistem semasa."
+        },
+        {
+          "problem": "Mengendalikan Data Kehadiran yang Besar",
+          "description": "Menggunakan mekanisme pengindeksan dan caching yang cekap untuk mempercepat pertanyaan dan mengurangkan beban. Juga melaksanakan antrian untuk pemprosesan data kehadiran yang besar bagi menangani penciptaan syif bagi setiap kakitangan secara cekap."
+        },
+        {
+          "problem": "Pengurusan Status Kehadiran",
+          "description": "Melaksanakan logik untuk menentukan status kehadiran secara dinamik, memastikan kemas kini masa nyata dan pelaporan yang tepat."
+        },
+        {
+          "problem": "Pengurusan Syif yang Terlalu Dinamik",
+          "description": "Menjalankan ujian ciri yang meluas untuk mensimulasikan semua kemungkinan senario, memastikan sistem dapat menangani pelbagai konfigurasi syif dengan lancar."
+        }
+      ]
+    },
+    "currentStatus": {
+      "development": "Versi pertama telah diterapkan. Fungsi masuk dan keluar berfungsi, dan senarai kehadiran juga telah beroperasi. Fasa kedua sedang dalam pembangunan untuk membaiki semua pepijat yang dikenal pasti.",
+      "shiftManagement": "Belum disempurnakan sepenuhnya dalam fasa pertama.",
+      "legacyBugFixes": "Sedang membaiki beberapa pepijat warisan dalam sistem HR bersama seorang rakan sekerja.",
+      "purpose": "Tujuan pembangunan ini adalah untuk diterapkan sebagai rakan kongsi TENCENT."
+    },
+    "impact": [
+      "Meningkatkan kecekapan dalam menjejak kehadiran pekerja, mengurangkan percanggahan dan memperbaiki pengurusan tenaga kerja.",
+      "Menghapuskan penjejakan kehadiran secara manual, memperkemas operasi HR dan mengurangkan beban pentadbiran.",
+      "Mengoptimumkan prestasi untuk menangani data kehadiran yang besar, memastikan operasi sistem yang lancar walaupun pada skala besar.",
+      "Mengukuhkan tawaran HRMS dengan mengintegrasikan modul Kehadiran Masa yang telah lama hilang, menangani sebab utama penolakan sistem oleh syarikat.",
+      "Mengurangkan kebergantungan kepada aplikasi penjejakan kehadiran pihak ketiga, menyediakan penyelesaian yang lebih lancar dan kos efektif dalam HRMS kami.",
+      "Memperluaskan daya tarikan pasaran dengan menawarkan rangkaian HRMS lengkap dengan sistem kehadiran masa bersepadu, meningkatkan kadar penggunaan dan kepuasan pelanggan."
+    ],
+    "myRole": [
+      "Mereka bentuk dan melaksanakan skema pangkalan data untuk penjejakan kehadiran, termasuk reka bentuk ERD.",
+      "Membangunkan API untuk masuk/keluar, pengurusan syif, dan penjejakan kehadiran.",
+      "Melaksanakan pengurusan status kehadiran berdasarkan tindakan pekerja (masuk, keluar, atau rekod cuti).",
+      "Memastikan pengesahan data dan ujian integrasi untuk kebolehpercayaan sistem.",
+      "Mengoptimumkan prestasi untuk menangani jumlah besar rekod kehadiran.",
+      "Bekerjasama dengan pasukan frontend untuk memastikan integrasi API dan aliran data yang lancar."
+    ],
+    "keyTakeaways": {
+      "technicalGrowth": [
+        "Pengalaman pertama dalam membangunkan sistem backend dan mempelajari Laravel.",
+        "Mendapat kepakaran dalam mengoptimumkan pertanyaan pangkalan data dan prestasi API.",
+        "Meningkatkan pemprosesan data berskala besar menggunakan antrian dan caching.",
+        "Menambah baik kemahiran debugging untuk menyelesaikan masalah sistem yang kompleks."
+      ],
+      "professionalGrowth": [
+        "Memperkukuhkan kemahiran penyelesaian masalah dalam mengintegrasikan sistem warisan, khususnya dalam reka bentuk pangkalan data.",
+        "Mendapat pengetahuan tentang cara bekerjasama dan berkomunikasi dengan berkesan dengan pembangun frontend.",
+        "Mempelajari amalan terbaik dalam menyediakan dokumentasi API untuk peralihan pembangunan yang lancar."
+      ]
+    }
+  },
+  {
     "id": 2,
     "title": "PactOnline - Sistem Pengurusan B2B, Wasiat & Tiket (Dibina dengan Next.js)",
-    "type": "Aplikasi Web Frontend (Platform B2B & Sistem Pengurusan Wasiat)",
+    "type": "Frontend",
     "description": "Aplikasi frontend yang dibangunkan untuk Pacific Trustee Company bagi memudahkan interaksi B2B, pengurusan wasiat, serta sistem tiket untuk ejen, rakan kongsi, pentadbir, dan kakitangan.",
     "techStack": [
       {
@@ -130,7 +236,7 @@
   {
     "id": 3,
     "title": "Sistem Pengurusan Pangkalan Data & Laporan untuk Jurutera Servis (Dibina dengan Django)",
-    "type": "Aplikasi Web Full-Stack (Sistem Dalaman)",
+    "type": "Full-Stack",
     "description": "Aplikasi dalaman yang berkuasa untuk menyelaraskan laporan servis, mengurus data komponen mesin ujian, dan memperkemaskan pemantauan pelanggan bagi kecekapan serta keselamatan yang lebih baik",
     "techStack": [
       {

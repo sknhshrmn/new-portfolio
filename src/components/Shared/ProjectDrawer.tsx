@@ -188,21 +188,21 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
                     {t("Problem")}:
                   </div>
                   <ul className="list-disc list-inside text-gray-600">
-                    <span className="!text-foreground">
-                      {project.problem_solution.problem.map((prob, index) => (
-                        <li key={index}>{prob}</li>
-                      ))}
-                    </span>
+                    {project.problem_solution.problem.map((prob, index) => (
+                      <li key={index}>
+                        <span className="!text-foreground">{prob}</span>
+                      </li>
+                    ))}
                   </ul>
                   <span className="font-montserrat font-semibold text-muted-foreground">
                     {t("Solution")}:
                   </span>
                   <ul className="list-disc list-inside text-gray-600">
-                    <span className="!text-foreground">
-                      {project.problem_solution.solution.map((sol, index) => (
-                        <li key={index}>{sol}</li>
-                      ))}
-                    </span>
+                    {project.problem_solution.solution.map((sol, index) => (
+                      <li key={index}>
+                        <span className="!text-foreground">{sol}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </InnerCard>
@@ -211,11 +211,11 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
             {Array.isArray(project.impact) && project.impact.length > 0 && (
               <InnerCard title={t("Impact")}>
                 <ul className="list-disc list-inside text-gray-600">
-                  <span className="!text-foreground">
-                    {project.impact.map((imp, index) => (
-                      <li key={index}>{imp}</li>
-                    ))}
-                  </span>
+                  {project.impact.map((imp, index) => (
+                    <li key={index}>
+                      <span className="!text-foreground">{imp}</span>
+                    </li>
+                  ))}
                 </ul>
               </InnerCard>
             )}
@@ -223,11 +223,11 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
             {Array.isArray(project.my_role) && project.my_role.length > 0 && (
               <InnerCard title={t("My Role")}>
                 <ul className="list-disc list-inside text-gray-600">
-                  <span className="!text-foreground">
-                    {project.my_role.map((role, index) => (
-                      <li key={index}>{role}</li>
-                    ))}
-                  </span>
+                  {project.my_role.map((role, index) => (
+                    <li key={index}>
+                      <span className="!text-foreground">{role}</span>
+                    </li>
+                  ))}
                 </ul>
               </InnerCard>
             )}
@@ -244,13 +244,11 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
                       {t("Next Steps")}:
                     </span>
                     <ul className="list-disc list-inside text-gray-600">
-                      <span className="!text-foreground">
-                        {project.current_status.next_steps.map(
-                          (step, index) => (
-                            <li key={index}>{step}</li>
-                          )
-                        )}
-                      </span>
+                      {project.current_status.next_steps.map((step, index) => (
+                        <li key={index}>
+                          <span className="!text-foreground">{step}</span>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 )}
@@ -264,25 +262,25 @@ const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
                     {t("Technical Growth")}:
                   </div>
                   <ul className="list-disc list-inside text-gray-600">
-                    <span className="!text-foreground">
-                      {project.key_takeaways.technical_growth.map(
-                        (item: string, index: number) => (
-                          <li key={index}>{item}</li>
-                        )
-                      )}
-                    </span>
+                    {project.key_takeaways.technical_growth.map(
+                      (item: string, index: number) => (
+                        <li key={index}>
+                          <span className="!text-foreground">{item}</span>
+                        </li>
+                      )
+                    )}
                   </ul>
                   <div className="font-semibold text-muted-foreground">
                     {t("Professional Growth")}:
                   </div>
                   <ul className="list-disc list-inside text-gray-600">
-                    <span className="!text-foreground">
-                      {project.key_takeaways.professional_growth.map(
-                        (item: string, index: number) => (
-                          <li key={index}>{item}</li>
-                        )
-                      )}
-                    </span>
+                    {project.key_takeaways.professional_growth.map(
+                      (item: string, index: number) => (
+                        <li key={index}>
+                          <span className="!text-foreground">{item}</span>
+                        </li>
+                      )
+                    )}
                   </ul>
                 </div>
               </InnerCard>

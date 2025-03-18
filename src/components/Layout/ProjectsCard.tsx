@@ -10,6 +10,7 @@ import { Spinner } from "../ui/spinner";
 interface Project {
   id: string; // Assuming each project has an ID
   title: string;
+  type: string;
   description: string;
   image: string;
   link: string;

@@ -30,7 +30,7 @@ export default function Home() {
         });
       },
       {
-        threshold: 0.8, // 80% of the section should be visible
+        threshold: 0.5, // 50% of the section should be visible
       }
     );
 
